@@ -1,1 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.tuempresa.investtrack" />
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.InvestTrack">
+
+        <activity
+            android:name="InvestTrack.manage.ManageInvestmentActivity"
+            android:exported="false" />
+        <activity
+            android:name="InvestTrack.detail.DetailActivity"
+            android:exported="false" />
+        <activity
+            android:name="InvestTrack.profile.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name="InvestTrack.favorites.FavoritesActivity"
+            android:exported="false" />
+        <activity
+            android:name="InvestTrack.home.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name="InvestTrack.register.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name="InvestTrack.login.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

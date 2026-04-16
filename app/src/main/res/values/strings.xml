@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">InvestTrack</string>
+    <string name="login_logo_initials">IT</string>
+    <string name="register_logo_initials">IT</string>
+    <string name="profile_avatar_initials">AT</string>
+
+    <string name="login_title">Welcome back</string>
+    <string name="login_subtitle">Sign in to review your portfolio, favorites and investment performance.</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="action_sign_in">Log in</string>
+    <string name="login_no_account">No account yet?</string>
+    <string name="action_create_account">Create account</string>
+    <string name="guest_mode_title">Explore first</string>
+    <string name="guest_mode_caption">Guest mode lets you explore the interface without saving data.</string>
+    <string name="action_guest_mode">Continue as guest</string>
+
+    <string name="register_title">Create your account</string>
+    <string name="register_subtitle">Build your student investment portfolio with a clean, simple and consistent flow.</string>
+    <string name="hint_full_name">Full name</string>
+    <string name="hint_confirm_password">Confirm password</string>
+    <string name="register_legal">By continuing, you accept the Terms and Conditions and the academic use of this demo app.</string>
+    <string name="action_register">Create account</string>
+    <string name="register_have_account">Already have an account?</string>
+
+    <string name="home_greeting">Good morning</string>
+    <string name="home_portfolio_label">Total balance</string>
+    <string name="home_balance_value">$124,830.00</string>
+    <string name="home_balance_change">+12.8%% this month</string>
+    <string name="search_hint">Search assets, tickers or sectors</string>
+    <string name="filter_all">All</string>
+    <string name="filter_stock">Stock</string>
+    <string name="filter_crypto">Crypto</string>
+    <string name="section_watchlist">Top investments</string>
+    <string name="section_favorites">Favorites</string>
+
+    <string name="asset_name_tesla">Tesla</string>
+    <string name="asset_type_stock">Stock</string>
+    <string name="asset_ticker_tsla">TSLA</string>
+    <string name="asset_price_tesla">$248.32</string>
+    <string name="asset_qty_tesla">12 shares</string>
+    <string name="asset_profit_tesla">+$1,284</string>
+
+    <string name="favorite_name_bitcoin">Bitcoin</string>
+    <string name="favorite_type_crypto">Crypto</string>
+    <string name="favorite_ticker_btc">BTC</string>
+    <string name="favorite_price_btc">$63,220</string>
+    <string name="favorite_qty_btc">0.42 BTC</string>
+    <string name="favorite_profit_btc">+$2,108</string>
+
+    <string name="detail_title">Asset detail</string>
+    <string name="detail_company_name">Tesla</string>
+    <string name="detail_ticker">TSLA</string>
+    <string name="detail_price">$248.32</string>
+    <string name="detail_change">+4.82%%</string>
+    <string name="detail_chart_label">Performance (7D)</string>
+    <string name="detail_chart_placeholder">Interactive chart area</string>
+    <string name="detail_stat_current_price">Current price</string>
+    <string name="detail_stat_today_change">Change (today)</string>
+    <string name="detail_position_title">Your position</string>
+    <string name="detail_position_amount">12 shares</string>
+    <string name="detail_position_avg_price">$229.10 avg</string>
+    <string name="detail_position_value">$2,979.84 market value</string>
+    <string name="detail_position_profit_label">Profit</string>
+    <string name="detail_position_profit_value">+$1,284</string>
+    <string name="detail_position_return_label">Return</string>
+    <string name="detail_position_return_value">+12.80%%</string>
+    <string name="action_manage_investment">Manage investment</string>
+
+    <string name="favorites_title">Favorites</string>
+    <string name="favorites_subtitle">Assets you marked to revisit quickly.</string>
+    <string name="favorites_empty_hint">Curated favorites for fast access</string>
+
+    <string name="manage_title">Manage investment</string>
+    <string name="manage_subtitle">Update your position with a clean review before saving.</string>
+    <string name="manage_preview_title">Position preview</string>
+    <string name="manage_price_label">New unit price</string>
+    <string name="manage_qty_label">Quantity</string>
+    <string name="manage_value_label">Current value</string>
+    <string name="manage_profit_label">Profit</string>
+    <string name="manage_return_label">Return</string>
+    <string name="manage_current_value">$2,979.84</string>
+    <string name="manage_current_profit">+$1,284</string>
+    <string name="manage_current_return">+12.80%%</string>
+    <string name="action_update_investment">Update investment</string>
+    <string name="action_cancel">Cancel</string>
+
+    <string name="profile_title">Profile</string>
+    <string name="profile_name">Alicia Torres</string>
+    <string name="profile_id_label">Investor ID</string>
+    <string name="profile_id_value">#IT-2048</string>
+    <string name="profile_option_edit">Edit profile</string>
+    <string name="profile_option_language">Language</string>
+    <string name="profile_option_appearance">Appearance</string>
+    <string name="profile_option_terms">Terms and conditions</string>
+    <string name="profile_option_logout">Log out</string>
+
+    <string name="bottom_home">Home</string>
+    <string name="bottom_favorites">Favorites</string>
+    <string name="bottom_profile">Profile</string>
+
+    <string name="cd_back">Go back</string>
+    <string name="cd_search_icon">Search</string>
+    <string name="cd_favorite">Favorite asset</string>
+    <string name="cd_toggle_favorite">Toggle favorite</string>
+    <string name="cd_profile_avatar">Profile avatar</string>
+    <string name="cd_portfolio_logo">Investment logo</string>
+    <string name="cd_open_profile_option">Open profile option</string>
+    <string name="login_error_invalid_credentials">Enter a valid email and a password with at least 6 characters.</string>
+    <string name="login_success">Session started successfully.</string>
+    <string name="guest_mode_enabled">Guest mode enabled.</string>
+    <string name="register_error_empty_fields">Complete all the fields before continuing.</string>
+    <string name="register_error_password_match">Passwords must match and contain at least 6 characters.</string>
+    <string name="register_success">Account created successfully.</string>
+    <string name="profile_feature_soon">This section is ready visually and can be connected later.</string>
+    <string name="logout_success">Session closed.</string>
+    <string name="favorites_empty_message">You removed this asset from favorites. Add it again from the detail screen.</string>
+    <string name="favorites_available_message">Your quick access favorites are available here.</string>
+    <string name="favorite_added">Added to favorites.</string>
+    <string name="favorite_removed">Removed from favorites.</string>
+    <string name="investment_updated">Investment updated.</string>
+    <string name="manage_invalid_values">Enter a price and quantity greater than zero.</string>
+    <string name="detail_company_name_dynamic">Tesla Motors</string>
+    <string name="home_greeting_format">Good morning, %1$s</string>
+    <string name="profile_guest_name">Guest investor</string>
+    <string name="profile_guest_id">Guest session</string>
+    <string name="detail_avg_suffix"> avg</string>
+    <string name="detail_market_value_suffix"> market value</string>
+</resources>
