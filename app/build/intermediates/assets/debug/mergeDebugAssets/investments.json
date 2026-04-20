@@ -1,1 +1,34 @@
-{}
+{
+  "assets": [
+    {
+      "id": "msft",
+      "name": "Microsoft",
+      "ticker": "MSFT",
+      "type": "Stock",
+      "currentPrice": 421.9,
+      "quantity": 8,
+      "averagePrice": 305.9,
+      "logoDrawableName": "logo_microsoft"
+    },
+    {
+      "id": "btc",
+      "name": "Bitcoin",
+      "ticker": "BTC",
+      "type": "Crypto",
+      "currentPrice": 63220,
+      "quantity": 0.42,
+      "averagePrice": 58200,
+      "logoDrawableName": "logo_bitcoin"
+    },
+    {
+      "id": "tsla",
+      "name": "Tesla",
+      "ticker": "TSLA",
+      "type": "Stock",
+      "currentPrice": 248.32,
+      "quantity": 12,
+      "averagePrice": 141.32,
+      "logoDrawableName": "logo_tesla"
+    }
+  ]
+}

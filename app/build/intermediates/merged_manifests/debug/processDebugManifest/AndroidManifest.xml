@@ -15,15 +15,25 @@
     <uses-permission android:name="com.tuempresa.investtrack.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 
     <application
+        android:name="InvestTrack.app.InvestTrackApplication"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
         android:extractNativeLibs="false"
-        android:icon="@drawable/logo_microsoft"
+        android:icon="@drawable/investtrack"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/logo_microsoft"
+        android:roundIcon="@drawable/investtrack"
         android:supportsRtl="true"
         android:theme="@style/Theme.InvestTrack" >
+        <activity
+            android:name="InvestTrack.splash.SplashActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="InvestTrack.manage.ManageInvestmentActivity"
             android:exported="false" />
@@ -44,13 +54,7 @@
             android:exported="false" />
         <activity
             android:name="InvestTrack.login.LoginActivity"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

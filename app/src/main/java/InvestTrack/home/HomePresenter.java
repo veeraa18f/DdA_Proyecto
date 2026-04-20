@@ -117,14 +117,17 @@ public class HomePresenter implements HomeContract.Presenter {
                 || asset.getType().toLowerCase(Locale.US).contains(normalizedQuery);
     }
 
-    private HomeViewModel buildViewModel(List<Asset> assets) {
+    private HomeViewModel buildViewModel(List<Asset> visibleAssets) {
         HomeViewModel viewModel = new HomeViewModel();
         double totalValue = 0;
         double totalProfit = 0;
 
-        for (Asset asset : assets) {
+        for (Asset asset : allAssets) {
             totalValue += asset.getCurrentValue();
             totalProfit += asset.getProfit();
+        }
+
+        for (Asset asset : visibleAssets) {
             viewModel.assets.add(buildAssetViewModel(asset));
         }
 

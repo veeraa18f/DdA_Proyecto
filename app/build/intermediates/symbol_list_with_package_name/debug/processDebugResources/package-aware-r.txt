@@ -1292,6 +1292,7 @@ color cardview_shadow_start_color
 color colorBackground
 color colorBlack
 color colorBorder
+color colorButtonSecondary
 color colorCard
 color colorNegative
 color colorNegativeContainer
@@ -2983,6 +2984,7 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_profile
 drawable ic_search_black_24
 drawable indeterminate_static
+drawable investtrack
 drawable logo_bitcoin
 drawable logo_microsoft
 drawable logo_tesla
@@ -3185,6 +3187,7 @@ id compress
 id confirm_button
 id container
 id container_home_assets
+id container_home_filters
 id content
 id contentPanel
 id contiguous
@@ -3241,6 +3244,9 @@ id fill
 id fill_horizontal
 id fill_vertical
 id filled
+id filter_home_all
+id filter_home_crypto
+id filter_home_stock
 id fitCenter
 id fitEnd
 id fitStart
@@ -3273,12 +3279,14 @@ id ignoreRequest
 id image
 id indeterminate
 id info
+id input_home_search
 id invisible
 id inward
 id italic
 id item_touch_helper_previous_elevation
 id iv_detail_logo
 id iv_investment_logo
+id iv_splash_logo
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -3423,6 +3431,7 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
+id row_profile_dark_mode
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -3478,6 +3487,7 @@ id stop
 id stretch
 id submenuarrow
 id submit_area
+id switch_profile_dark_mode
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -3535,12 +3545,14 @@ id tv_detail_asset_quantity
 id tv_detail_asset_value
 id tv_home_balance_change
 id tv_home_balance_value
+id tv_home_empty_assets
 id tv_investment_name
 id tv_investment_price
 id tv_investment_profit
 id tv_investment_quantity
 id tv_investment_ticker
 id tv_investment_type
+id tv_splash_title
 id unchecked
 id uniform
 id unlabeled
@@ -3679,6 +3691,7 @@ layout activity_login
 layout activity_manage_investment
 layout activity_profile
 layout activity_register
+layout activity_splash
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3832,6 +3845,7 @@ string call_notification_ongoing_text
 string call_notification_screening_text
 string cd_back
 string cd_favorite
+string cd_investtrack_logo
 string cd_portfolio_logo
 string character_counter_content_description
 string character_counter_overflowed_content_description
@@ -3849,11 +3863,16 @@ string favorite_added
 string favorite_removed
 string favorites_subtitle
 string favorites_title
+string filter_all
+string filter_crypto
+string filter_stock
 string hide_bottom_view_on_scroll_behavior
 string home_balance_change
 string home_balance_value
+string home_empty_assets
 string home_greeting
 string home_portfolio_label
+string home_search_hint
 string icon_content_description
 string investment_updated
 string item_view_role_description
@@ -3967,6 +3986,7 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string profile_id_value
 string profile_name
+string profile_option_dark_mode
 string profile_option_logout
 string profile_title
 string register_success

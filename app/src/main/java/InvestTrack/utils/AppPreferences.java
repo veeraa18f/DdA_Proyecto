@@ -9,6 +9,7 @@ public final class AppPreferences {
     private static final String KEY_LOGGED_IN = "logged_in";
     private static final String KEY_GUEST_MODE = "guest_mode";
     private static final String KEY_IS_FAVORITE = "is_favorite";
+    private static final String KEY_DARK_MODE = "dark_mode";
 
     private AppPreferences() {
     }
@@ -52,5 +53,16 @@ public final class AppPreferences {
                 .putBoolean(KEY_IS_FAVORITE, updatedValue)
                 .apply();
         return updatedValue;
+    }
+
+    public static boolean isDarkModeEnabled(Context context) {
+        return preferences(context).getBoolean(KEY_DARK_MODE, false);
+    }
+
+    public static void setDarkModeEnabled(Context context, boolean enabled) {
+        preferences(context)
+                .edit()
+                .putBoolean(KEY_DARK_MODE, enabled)
+                .apply();
     }
 }
