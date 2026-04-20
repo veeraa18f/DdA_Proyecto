@@ -1,53 +1,20 @@
 package InvestTrack.home;
 
 import java.lang.ref.WeakReference;
+import java.util.List;
+
+import InvestTrack.data.Asset;
 
 public interface HomeContract {
 
-<<<<<<< ours
-  interface View {
-    void injectPresenter(Presenter presenter);
-
-    void onRefreshViewWithUpdatedData(HomeViewModel viewModel);
-
-    void navigateToNextScreen();
-    void navigateToPreviousScreen();
-  }
-
-  interface Presenter {
-    void injectView(WeakReference<View> view);
-    void injectModel(Model model);
-
-    void onResumeCalled();
-    void onCreateCalled();
-    void onRecreateCalled();
-    void onBackButtonPressed();
-    void onPauseCalled();
-    void onDestroyCalled();
-  }
-
-  interface Model {
-    String getStoredData();
-    String getSavedData();
-
-    String getCurrentData();
-    void setCurrentData(String data);
-
-    void onUpdatedDataFromRecreatedScreen(String data);
-    void onUpdatedDataFromNextScreen(String data);
-    void onUpdatedDataFromPreviousScreen(String data);
-  }
-
-}
-=======
     interface View {
         void injectPresenter(Presenter presenter);
 
         void onRefreshViewWithUpdatedData(HomeViewModel viewModel);
 
-        void navigateToNextScreen();
+        void navigateToDetailScreen();
 
-        void navigateToPreviousScreen();
+        void showError(String message);
     }
 
     interface Presenter {
@@ -55,34 +22,18 @@ public interface HomeContract {
 
         void injectModel(Model model);
 
-        void onResumeCalled();
-
         void onCreateCalled();
 
-        void onRecreateCalled();
+        void onSearchQueryChanged(String query);
 
-        void onBackButtonPressed();
+        void onFilterSelected(String filter);
 
-        void onPauseCalled();
+        void onAssetClicked(String assetId);
 
         void onDestroyCalled();
     }
 
     interface Model {
-        String getStoredData();
-
-        String getSavedData();
-
-        String getCurrentData();
-
-        void setCurrentData(String data);
-
-        void onUpdatedDataFromRecreatedScreen(String data);
-
-        void onUpdatedDataFromNextScreen(String data);
-
-        void onUpdatedDataFromPreviousScreen(String data);
+        List<Asset> getAssets();
     }
-
 }
->>>>>>> theirs

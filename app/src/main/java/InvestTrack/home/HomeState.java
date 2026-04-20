@@ -2,12 +2,5 @@ package InvestTrack.home;
 
 public class HomeState extends HomeViewModel {
 
-<<<<<<< ours
-  // put the model state here
-
+    public String selectedAssetId;
 }
-=======
-    // put the model state here
-
-}
->>>>>>> theirs

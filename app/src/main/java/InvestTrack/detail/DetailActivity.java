@@ -3,10 +3,12 @@ package InvestTrack.detail;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.tuempresa.investtrack.R;
@@ -14,12 +16,22 @@ import com.tuempresa.investtrack.R;
 import InvestTrack.manage.ManageInvestmentActivity;
 import InvestTrack.utils.AppPreferences;
 import InvestTrack.utils.BottomNavHelper;
-import InvestTrack.utils.PortfolioFormatter;
-import InvestTrack.utils.PortfolioMetrics;
 
-public class DetailActivity extends AppCompatActivity {
+import java.lang.ref.WeakReference;
 
+public class DetailActivity extends AppCompatActivity implements DetailContract.View {
+
+    private static final String KEY_ASSET_ID = "asset_id";
+
+    private DetailContract.Presenter presenter;
     private ImageButton favoriteButton;
+    private ImageView assetLogo;
+    private TextView assetNameText;
+    private TextView tickerTypeText;
+    private TextView priceText;
+    private TextView quantityText;
+    private TextView valueText;
+    private TextView profitText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,49 +39,83 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
 
         favoriteButton = findViewById(R.id.btn_detail_favorite);
+        assetLogo = findViewById(R.id.iv_detail_logo);
+        assetNameText = findViewById(R.id.tv_detail_asset_name);
+        tickerTypeText = findViewById(R.id.tv_detail_asset_meta);
+        priceText = findViewById(R.id.tv_detail_asset_price);
+        quantityText = findViewById(R.id.tv_detail_asset_quantity);
+        valueText = findViewById(R.id.tv_detail_asset_value);
+        profitText = findViewById(R.id.tv_detail_asset_profit);
 
-        findViewById(R.id.btn_detail_back).setOnClickListener(view -> finish());
+        presenter = new DetailPresenter();
+        injectPresenter(presenter);
+        presenter.injectView(new WeakReference<>(this));
+        presenter.injectModel(new DetailModel(this));
+
+        findViewById(R.id.btn_detail_back).setOnClickListener(view -> presenter.onBackButtonPressed());
         favoriteButton.setOnClickListener(view -> toggleFavorite());
         findViewById(R.id.btn_manage_investment).setOnClickListener(view ->
-                startActivity(new Intent(this, ManageInvestmentActivity.class)));
+                presenter.onManageInvestmentClicked());
+
+        updateFavoriteIcon();
+        presenter.onCreateCalled(buildState(savedInstanceState));
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav_detail);
         BottomNavHelper.setup(this, bottomNavigationView, R.id.menu_home);
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-        bindPortfolioData();
-        updateFavoriteIcon();
+    public void injectPresenter(DetailContract.Presenter presenter) {
+        this.presenter = presenter;
     }
 
-    private void bindPortfolioData() {
-        double currentPrice = AppPreferences.getCurrentPrice(this);
-        double quantity = AppPreferences.getQuantity(this);
-        double averagePrice = AppPreferences.getAveragePrice();
-        PortfolioMetrics metrics = PortfolioMetrics.from(currentPrice, quantity, averagePrice);
+    @Override
+    public void onRefreshViewWithUpdatedData(DetailViewModel viewModel) {
+        assetLogo.setImageResource(resolveDrawable(viewModel.logoDrawableName));
+        assetNameText.setText(viewModel.name);
+        tickerTypeText.setText(viewModel.tickerTypeText);
+        priceText.setText(viewModel.priceText);
+        quantityText.setText(viewModel.quantityText);
+        valueText.setText(viewModel.currentValueText);
+        profitText.setText(viewModel.profitText);
+        profitText.setTextColor(ContextCompat.getColor(
+                this,
+                viewModel.profitPositive ? R.color.colorPositive : R.color.colorNegative
+        ));
+        profitText.setBackgroundResource(
+                viewModel.profitPositive ? R.drawable.bg_profit_badge : R.drawable.bg_loss_badge
+        );
+    }
 
-        ((TextView) findViewById(R.id.tv_detail_header_ticker)).setText(getString(R.string.detail_ticker));
-        ((TextView) findViewById(R.id.tv_detail_company_name)).setText(getString(R.string.detail_company_name_dynamic));
-        ((TextView) findViewById(R.id.tv_detail_ticker)).setText(getString(R.string.detail_ticker));
+    @Override
+    public void navigateToManageScreen() {
+        startActivity(new Intent(this, ManageInvestmentActivity.class));
+    }
 
-        String price = PortfolioFormatter.formatCurrency(currentPrice);
-        String change = PortfolioFormatter.formatSignedPercent(metrics.getReturnPercentage());
-        String marketValue = PortfolioFormatter.formatCurrency(metrics.getMarketValue());
-        String profit = PortfolioFormatter.formatSignedCurrency(metrics.getProfit());
-        String average = PortfolioFormatter.formatCurrency(averagePrice) + " avg";
+    @Override
+    public void navigateToPreviousScreen() {
+        finish();
+    }
 
-        ((TextView) findViewById(R.id.tv_detail_price)).setText(price);
-        ((TextView) findViewById(R.id.tv_detail_change)).setText(change);
-        ((TextView) findViewById(R.id.tv_detail_stat_price)).setText(price);
-        ((TextView) findViewById(R.id.tv_detail_stat_change)).setText(change);
-        ((TextView) findViewById(R.id.tv_detail_position_amount)).setText(PortfolioFormatter.formatQuantity(quantity));
-        ((TextView) findViewById(R.id.tv_detail_position_avg_price)).setText(average);
-        ((TextView) findViewById(R.id.tv_detail_position_value)).setText(marketValue + " market value");
-        ((TextView) findViewById(R.id.tv_detail_position_value_card)).setText(marketValue);
-        ((TextView) findViewById(R.id.tv_detail_profit_value)).setText(profit);
-        ((TextView) findViewById(R.id.tv_detail_return_value)).setText(change);
+    @Override
+    public void showError(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        if (presenter != null && presenter.getCurrentAssetId() != null) {
+            outState.putString(KEY_ASSET_ID, presenter.getCurrentAssetId());
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (presenter != null) {
+            presenter.onDestroyCalled();
+        }
+        super.onDestroy();
     }
 
     private void toggleFavorite() {
@@ -83,8 +129,19 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     private void updateFavoriteIcon() {
-        favoriteButton.setImageResource(
-                AppPreferences.isFavorite(this) ? R.drawable.ic_star_filled : R.drawable.ic_star
-        );
+        favoriteButton.setImageResource(R.drawable.ic_favorite_star);
+    }
+
+    private DetailState buildState(Bundle savedInstanceState) {
+        DetailState state = new DetailState();
+        if (savedInstanceState != null) {
+            state.assetId = savedInstanceState.getString(KEY_ASSET_ID);
+        }
+        return state;
+    }
+
+    private int resolveDrawable(String drawableName) {
+        int drawableId = getResources().getIdentifier(drawableName, "drawable", getPackageName());
+        return drawableId == 0 ? R.drawable.logo_microsoft : drawableId;
     }
 }

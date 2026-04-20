@@ -1,5 +1,9 @@
 package InvestTrack.app;
 
 public class DetailToManageState {
-  public String investmentId;
+  public String assetId;
+
+  public DetailToManageState(String assetId) {
+    this.assetId = assetId;
+  }
 }

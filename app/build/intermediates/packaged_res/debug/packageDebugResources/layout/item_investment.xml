@@ -13,15 +13,18 @@
     <FrameLayout
         android:layout_width="@dimen/icon_box_size"
         android:layout_height="@dimen/icon_box_size"
-        android:background="@drawable/bg_chip_selected">
+        android:background="@drawable/bg_chip_selected"
+        android:padding="@dimen/spacing_sm">
 
         <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:id="@+id/iv_investment_logo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
+            android:adjustViewBounds="true"
             android:contentDescription="@string/cd_portfolio_logo"
-            android:src="@drawable/ic_home"
-            android:tint="@color/colorBlack" />
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo_microsoft" />
     </FrameLayout>
 
     <LinearLayout
@@ -32,9 +35,10 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/tv_investment_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/asset_name_tesla"
+            android:text="@string/asset_name_microsoft"
             android:textColor="@color/colorTextPrimary"
             android:textSize="@dimen/text_body_large"
             android:textStyle="bold" />
@@ -47,14 +51,16 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tv_investment_ticker"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/asset_ticker_tsla"
+                android:text="@string/asset_ticker_msft"
                 android:textColor="@color/colorTextSecondary"
                 android:textSize="@dimen/text_caption"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/tv_investment_type"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/spacing_sm"
@@ -69,10 +75,11 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/tv_investment_quantity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_sm"
-            android:text="@string/asset_qty_tesla"
+            android:text="@string/asset_qty_microsoft"
             android:textColor="@color/colorTextSecondary"
             android:textSize="@dimen/text_body" />
     </LinearLayout>
@@ -84,19 +91,21 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/tv_investment_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/asset_price_tesla"
+            android:text="@string/asset_price_microsoft"
             android:textColor="@color/colorTextPrimary"
             android:textSize="@dimen/text_body_large"
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/tv_investment_profit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_sm"
             android:background="@drawable/bg_profit_badge"
-            android:text="@string/asset_profit_tesla"
+            android:text="@string/asset_profit_microsoft"
             android:textColor="@color/colorPositive"
             android:textSize="@dimen/text_caption"
             android:textStyle="bold" />

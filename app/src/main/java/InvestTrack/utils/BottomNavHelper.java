@@ -29,7 +29,6 @@ public final class BottomNavHelper {
                 return false;
             }
 
-            intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
             activity.startActivity(intent);
             activity.finish();
             return true;
@@ -40,15 +39,12 @@ public final class BottomNavHelper {
         if (selectedItemId == R.id.menu_home) {
             return new Intent(activity, HomeActivity.class);
         }
-
         if (selectedItemId == R.id.menu_favorites) {
             return new Intent(activity, FavoritesActivity.class);
         }
-
         if (selectedItemId == R.id.menu_profile) {
             return new Intent(activity, ProfileActivity.class);
         }
-
         return null;
     }
 }

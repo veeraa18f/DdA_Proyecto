@@ -1,13 +1,13 @@
 package InvestTrack.home;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class HomeViewModel {
 
-<<<<<<< ours
-  // put the view state here
-  public String data;
+    public String totalBalanceText;
+    public String totalChangeText;
+    public String searchQuery;
+    public String selectedFilter;
+    public List<HomeAssetViewModel> assets = new ArrayList<>();
 }
-=======
-    // put the view state here
-    public String data;
-}
->>>>>>> theirs

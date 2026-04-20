@@ -26,7 +26,6 @@
                 android:padding="@dimen/spacing_xl">
 
                 <TextView
-                    android:id="@+id/tv_home_greeting"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/home_greeting"
@@ -43,7 +42,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/tv_home_balance"
+                    android:id="@+id/tv_home_balance_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/spacing_sm"
@@ -64,69 +63,6 @@
                     android:textStyle="bold" />
             </LinearLayout>
 
-            <EditText
-                android:id="@+id/input_search_home"
-                style="@style/Widget.InvestTrack.EditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_xl"
-                android:drawableStart="@drawable/ic_search"
-                android:drawablePadding="@dimen/spacing_md"
-                android:hint="@string/search_hint"
-                android:inputType="text" />
-
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_lg"
-                android:scrollbars="none">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/bg_chip_selected"
-                        android:paddingStart="@dimen/spacing_lg"
-                        android:paddingTop="@dimen/spacing_sm"
-                        android:paddingEnd="@dimen/spacing_lg"
-                        android:paddingBottom="@dimen/spacing_sm"
-                        android:text="@string/filter_all"
-                        android:textColor="@color/colorBlack"
-                        android:textSize="@dimen/text_body"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/spacing_sm"
-                        android:background="@drawable/bg_chip"
-                        android:paddingStart="@dimen/spacing_lg"
-                        android:paddingTop="@dimen/spacing_sm"
-                        android:paddingEnd="@dimen/spacing_lg"
-                        android:paddingBottom="@dimen/spacing_sm"
-                        android:text="@string/filter_stock"
-                        android:textColor="@color/colorTextPrimary"
-                        android:textSize="@dimen/text_body" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/spacing_sm"
-                        android:background="@drawable/bg_chip"
-                        android:paddingStart="@dimen/spacing_lg"
-                        android:paddingTop="@dimen/spacing_sm"
-                        android:paddingEnd="@dimen/spacing_lg"
-                        android:paddingBottom="@dimen/spacing_sm"
-                        android:text="@string/filter_crypto"
-                        android:textColor="@color/colorTextPrimary"
-                        android:textSize="@dimen/text_body" />
-                </LinearLayout>
-            </HorizontalScrollView>
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -136,19 +72,11 @@
                 android:textSize="@dimen/text_title"
                 android:textStyle="bold" />
 
-            <include
-                android:id="@+id/card_home_primary_investment"
-                layout="@layout/item_investment"
+            <LinearLayout
+                android:id="@+id/container_home_assets"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_lg" />
-
-            <include
-                android:id="@+id/card_home_secondary_investment"
-                layout="@layout/item_investment"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_md" />
+                android:orientation="vertical" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -171,10 +99,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/spacing_xxl"
-        android:layout_marginTop="@dimen/spacing_sm"
-        android:layout_marginEnd="@dimen/spacing_xxl"
-        android:layout_marginBottom="@dimen/spacing_xxl"
+        android:layout_margin="@dimen/spacing_xxl"
         android:background="@drawable/bg_modal"
         android:padding="@dimen/spacing_sm">
 
@@ -184,10 +109,7 @@
             android:layout_height="@dimen/bottom_nav_height"
             android:background="@android:color/transparent"
             app:itemBackground="@drawable/bottom_nav_item_background"
-            app:itemHorizontalTranslationEnabled="false"
-            app:itemIconSize="@dimen/icon_nav_size"
             app:itemIconTint="@color/bottom_nav_item_tint"
-            app:itemRippleColor="@android:color/transparent"
             app:itemTextColor="@color/bottom_nav_item_tint"
             app:labelVisibilityMode="unlabeled"
             app:menu="@menu/bottom_nav_menu" />

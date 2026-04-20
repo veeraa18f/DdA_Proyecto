@@ -1,5 +1,9 @@
 package InvestTrack.app;
 
 public class HomeToDetailState {
-  public String investmentId;
+  public String assetId;
+
+  public HomeToDetailState(String assetId) {
+    this.assetId = assetId;
+  }
 }

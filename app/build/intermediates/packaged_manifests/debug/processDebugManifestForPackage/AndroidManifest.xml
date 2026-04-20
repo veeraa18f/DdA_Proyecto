@@ -19,7 +19,9 @@
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
         android:extractNativeLibs="false"
+        android:icon="@drawable/logo_microsoft"
         android:label="@string/app_name"
+        android:roundIcon="@drawable/logo_microsoft"
         android:supportsRtl="true"
         android:theme="@style/Theme.InvestTrack" >
         <activity

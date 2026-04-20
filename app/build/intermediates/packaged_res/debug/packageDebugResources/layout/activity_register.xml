@@ -8,120 +8,63 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
         android:orientation="vertical"
         android:padding="@dimen/spacing_xxl">
 
         <TextView
-            android:layout_width="@dimen/logo_size"
-            android:layout_height="@dimen/logo_size"
-            android:background="@drawable/bg_chip_selected"
-            android:gravity="center"
-            android:text="@string/register_logo_initials"
-            android:textColor="@color/colorBlack"
-            android:textSize="@dimen/text_title"
-            android:textStyle="bold" />
-
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_xl"
             android:text="@string/register_title"
             android:textColor="@color/colorTextPrimary"
             android:textSize="@dimen/text_headline"
             android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_sm"
-            android:gravity="center"
-            android:text="@string/register_subtitle"
-            android:textColor="@color/colorTextSecondary"
-            android:textSize="@dimen/text_body_large" />
-
-        <LinearLayout
+        <EditText
+            style="@style/Widget.InvestTrack.EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_xxl"
-            android:background="@drawable/bg_modal"
-            android:orientation="vertical"
-            android:padding="@dimen/spacing_xl">
+            android:hint="Name"
+            android:inputType="textPersonName" />
 
-            <EditText
-                android:id="@+id/et_register_name"
-                style="@style/Widget.InvestTrack.EditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/hint_full_name"
-                android:inputType="textPersonName" />
+        <EditText
+            style="@style/Widget.InvestTrack.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
 
-            <EditText
-                android:id="@+id/et_register_email"
-                style="@style/Widget.InvestTrack.EditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_lg"
-                android:hint="@string/hint_email"
-                android:inputType="textEmailAddress" />
+        <EditText
+            style="@style/Widget.InvestTrack.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:hint="Password"
+            android:inputType="textPassword" />
 
-            <EditText
-                android:id="@+id/et_register_password"
-                style="@style/Widget.InvestTrack.EditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_lg"
-                android:hint="@string/hint_password"
-                android:inputType="textPassword" />
+        <Button
+            android:id="@+id/btn_register_submit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/spacing_xxl"
+            android:background="@drawable/bg_button_primary"
+            android:backgroundTint="@null"
+            android:text="@string/action_register"
+            android:textAllCaps="false"
+            android:textColor="@color/colorTextPrimary"
+            android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/et_register_confirm_password"
-                style="@style/Widget.InvestTrack.EditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_lg"
-                android:hint="@string/hint_confirm_password"
-                android:inputType="textPassword" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_lg"
-                android:text="@string/register_legal"
-                android:textColor="@color/colorTextSecondary"
-                android:textSize="@dimen/text_caption" />
-
-            <Button
-                android:id="@+id/btn_register"
-                style="@style/Widget.InvestTrack.Button.Primary"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_xl"
-                android:text="@string/action_register" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_lg"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/register_have_account"
-                    android:textColor="@color/colorTextSecondary"
-                    android:textSize="@dimen/text_body" />
-
-                <Button
-                    android:id="@+id/btn_back_to_login"
-                    style="@style/Widget.InvestTrack.Button.Secondary"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/spacing_md"
-                    android:minWidth="0dp"
-                    android:text="@string/action_sign_in" />
-            </LinearLayout>
-        </LinearLayout>
+        <Button
+            android:id="@+id/btn_register_back"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:background="@drawable/bg_button_secondary"
+            android:backgroundTint="@null"
+            android:text="@string/action_back"
+            android:textAllCaps="false"
+            android:textColor="@color/colorTextPrimary"
+            android:textStyle="bold" />
     </LinearLayout>
 </ScrollView>

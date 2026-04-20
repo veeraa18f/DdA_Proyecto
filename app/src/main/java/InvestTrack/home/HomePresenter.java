@@ -1,247 +1,36 @@
 package InvestTrack.home;
 
 import java.lang.ref.WeakReference;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
 
-import android.util.Log;
+import InvestTrack.app.AppMediator;
+import InvestTrack.app.HomeToDetailState;
+import InvestTrack.data.Asset;
 
 public class HomePresenter implements HomeContract.Presenter {
 
-<<<<<<< ours
-  public static String TAG = "InvesTrackSource.HomePresenter";
+    public static final String FILTER_ALL = "All";
+    public static final String FILTER_STOCK = "Stock";
+    public static final String FILTER_CRYPTO = "Crypto";
 
-  private WeakReference<HomeContract.View> view;
-  private AppMediator mediator;
-  private HomeContract.Model model;
-  private HomeState state;
-
-  public HomePresenter(AppMediator mediator) {
-    this.mediator = mediator;
-  }
-
-  @Override
-  public void onCreateCalled() {
-    Log.e(TAG, "onCreateCalled()");
-
-    // call the mediator initialize the state
-    state = new HomeState();
-
-
-    // use saved state if is necessary
-    SavedPreviousHomeState savedState = getStateFromPreviousScreen();
-    if (savedState != null) {
-
-      // update the model if is necessary
-      model.onUpdatedDataFromPreviousScreen(savedState.data);
-
-    }
-
-  }
-
-  @Override
-  public void onRecreateCalled() {
-    Log.e(TAG, "onRecreateCalled()");
-
-    // call the mediator to initialize the state
-    state = getSavedScreenState();
-
-    // update the model if is necessary
-    model.onUpdatedDataFromRecreatedScreen(state.data);
-  }
-
-  @Override
-  public void onResumeCalled() {
-    Log.e(TAG, "onResumeCalled()");
-
-
-    // use passed state if is necessary
-    SavedNextHomeState savedState = getStateFromNextScreen();
-    if (savedState != null) {
-
-      // update the model if is necessary
-      model.onUpdatedDataFromNextScreen(savedState.data);
-
-    }
-
-    // call the model and initialize the state
-    state.data = model.getCurrentData();
-
-    // update the view
-    view.get().onRefreshViewWithUpdatedData(state);
-
-  }
-
-  @Override
-  public void onBackButtonPressed() {
-    Log.e(TAG, "onBackButtonPressed()");
-
-  }
-
-  @Override
-  public void onPauseCalled() {
-    Log.e(TAG, "onPauseCalled()");
-
-    // save the state
-    saveScreenState();
-  }
-
-  @Override
-  public void onDestroyCalled() {
-    Log.e(TAG, "onDestroyCalled()");
-
-    // reset the state if is necessary
-    //resetScreenState();
-  }
-
-  private HomeState getSavedScreenState() {
-    return mediator.getHomeScreenState();
-  }
-
-  private void saveScreenState() {
-    mediator.setHomeScreenState(state);
-  }
-=======
-    public static String TAG = "InvesTrackSource.HomePresenter";
-
+    private final AppMediator mediator;
     private WeakReference<HomeContract.View> view;
-    private AppMediator mediator;
     private HomeContract.Model model;
-    private HomeState state;
+    private List<Asset> allAssets = new ArrayList<>();
+    private String searchQuery = "";
+    private String selectedFilter = FILTER_ALL;
+
+    public HomePresenter() {
+        this(AppMediator.getInstance());
+    }
 
     public HomePresenter(AppMediator mediator) {
         this.mediator = mediator;
-    }
-
-    @Override
-    public void onCreateCalled() {
-        Log.e(TAG, "onCreateCalled()");
-
-        // call the mediator initialize the state
-        state = new HomeState();
-
-
-        // use saved state if is necessary
-        SavedPreviousHomeState savedState = getStateFromPreviousScreen();
-        if (savedState != null) {
-
-            // update the model if is necessary
-            model.onUpdatedDataFromPreviousScreen(savedState.data);
-
-        }
-
-    }
-
-    @Override
-    public void onRecreateCalled() {
-        Log.e(TAG, "onRecreateCalled()");
-
-        // call the mediator to initialize the state
-        state = getSavedScreenState();
-
-        // update the model if is necessary
-        model.onUpdatedDataFromRecreatedScreen(state.data);
-    }
-
-    @Override
-    public void onResumeCalled() {
-        Log.e(TAG, "onResumeCalled()");
-
-
-        // use passed state if is necessary
-        SavedNextHomeState savedState = getStateFromNextScreen();
-        if (savedState != null) {
-
-            // update the model if is necessary
-            model.onUpdatedDataFromNextScreen(savedState.data);
-
-        }
-
-        // call the model and initialize the state
-        state.data = model.getCurrentData();
-
-        // update the view
-        view.get().onRefreshViewWithUpdatedData(state);
-
-    }
-
-    @Override
-    public void onBackButtonPressed() {
-        Log.e(TAG, "onBackButtonPressed()");
-
-    }
-
-    @Override
-    public void onPauseCalled() {
-        Log.e(TAG, "onPauseCalled()");
-
-        // save the state
-        saveScreenState();
-    }
-
-    @Override
-    public void onDestroyCalled() {
-        Log.e(TAG, "onDestroyCalled()");
-
-        // reset the state if is necessary
-        //resetScreenState();
-    }
-
-    private HomeState getSavedScreenState() {
-        return mediator.getHomeScreenState();
-    }
-
-    private void saveScreenState() {
-        mediator.setHomeScreenState(state);
-    }
->>>>>>> theirs
-
-
-  /*
-  private void resetScreenState() {
-    mediator.resetHomeScreenState();
-  }
-  */
-
-<<<<<<< ours
-  private SavedNextHomeState getStateFromNextScreen() {
-    return mediator.getNextHomeScreenState();
-  }
-
-  private void passStateToNextScreen(NewNextHomeState state) {
-    mediator.setNextHomeScreenState(state);
-  }
-
-  private void passStateToPreviousScreen(NewPreviousHomeState state) {
-    mediator.setPreviousHomeScreenState(state);
-  }
-
-  private SavedPreviousHomeState getStateFromPreviousScreen() {
-    return mediator.getPreviousHomeScreenState();
-  }
-
-  @Override
-  public void injectView(WeakReference<HomeContract.View> view) {
-    this.view = view;
-  }
-
-  @Override
-  public void injectModel(HomeContract.Model model) {
-    this.model = model;
-  }
-=======
-    private SavedNextHomeState getStateFromNextScreen() {
-        return mediator.getNextHomeScreenState();
-    }
-
-    private void passStateToNextScreen(NewNextHomeState state) {
-        mediator.setNextHomeScreenState(state);
-    }
-
-    private void passStateToPreviousScreen(NewPreviousHomeState state) {
-        mediator.setPreviousHomeScreenState(state);
-    }
-
-    private SavedPreviousHomeState getStateFromPreviousScreen() {
-        return mediator.getPreviousHomeScreenState();
     }
 
     @Override
@@ -253,6 +42,153 @@ public class HomePresenter implements HomeContract.Presenter {
     public void injectModel(HomeContract.Model model) {
         this.model = model;
     }
->>>>>>> theirs
 
+    @Override
+    public void onCreateCalled() {
+        if (model == null) {
+            currentView().showError("Home data is not ready.");
+            return;
+        }
+
+        allAssets = model.getAssets();
+        refreshView();
+    }
+
+    @Override
+    public void onSearchQueryChanged(String query) {
+        searchQuery = query == null ? "" : query.trim();
+        refreshView();
+    }
+
+    @Override
+    public void onFilterSelected(String filter) {
+        if (FILTER_STOCK.equals(filter) || FILTER_CRYPTO.equals(filter)) {
+            selectedFilter = filter;
+        } else {
+            selectedFilter = FILTER_ALL;
+        }
+        refreshView();
+    }
+
+    @Override
+    public void onAssetClicked(String assetId) {
+        HomeToDetailState state = new HomeToDetailState(assetId);
+        mediator.setNextDetailScreenState(state);
+        currentView().navigateToDetailScreen();
+    }
+
+    @Override
+    public void onDestroyCalled() {
+        if (view != null) {
+            view.clear();
+        }
+    }
+
+    private void refreshView() {
+        currentView().onRefreshViewWithUpdatedData(buildViewModel(filterAssets()));
+    }
+
+    private List<Asset> filterAssets() {
+        List<Asset> filteredAssets = new ArrayList<>();
+        String normalizedQuery = searchQuery.toLowerCase(Locale.US);
+
+        for (Asset asset : allAssets) {
+            if (!matchesFilter(asset) || !matchesSearch(asset, normalizedQuery)) {
+                continue;
+            }
+            filteredAssets.add(asset);
+        }
+
+        return filteredAssets;
+    }
+
+    private boolean matchesFilter(Asset asset) {
+        return FILTER_ALL.equals(selectedFilter)
+                || selectedFilter.equalsIgnoreCase(asset.getType());
+    }
+
+    private boolean matchesSearch(Asset asset, String normalizedQuery) {
+        if (normalizedQuery.isEmpty()) {
+            return true;
+        }
+
+        return asset.getName().toLowerCase(Locale.US).contains(normalizedQuery)
+                || asset.getTicker().toLowerCase(Locale.US).contains(normalizedQuery)
+                || asset.getType().toLowerCase(Locale.US).contains(normalizedQuery);
+    }
+
+    private HomeViewModel buildViewModel(List<Asset> assets) {
+        HomeViewModel viewModel = new HomeViewModel();
+        double totalValue = 0;
+        double totalProfit = 0;
+
+        for (Asset asset : assets) {
+            totalValue += asset.getCurrentValue();
+            totalProfit += asset.getProfit();
+            viewModel.assets.add(buildAssetViewModel(asset));
+        }
+
+        viewModel.totalBalanceText = formatCurrency(totalValue, true);
+        viewModel.totalChangeText = formatSignedWholeCurrency(totalProfit) + " total profit";
+        viewModel.searchQuery = searchQuery;
+        viewModel.selectedFilter = selectedFilter;
+        return viewModel;
+    }
+
+    private HomeAssetViewModel buildAssetViewModel(Asset asset) {
+        HomeAssetViewModel viewModel = new HomeAssetViewModel();
+        viewModel.assetId = asset.getId();
+        viewModel.name = asset.getName();
+        viewModel.ticker = asset.getTicker();
+        viewModel.type = asset.getType();
+        viewModel.priceText = formatCurrency(asset.getCurrentPrice(), false);
+        viewModel.quantityText = formatQuantity(asset);
+        viewModel.profitText = formatSignedWholeCurrency(asset.getProfit());
+        viewModel.logoDrawableName = asset.getLogoDrawableName();
+        viewModel.profitPositive = asset.getProfit() >= 0;
+        return viewModel;
+    }
+
+    private String formatCurrency(double amount, boolean keepCents) {
+        NumberFormat formatter = NumberFormat.getCurrencyInstance(Locale.US);
+        if (keepCents || Math.abs(amount - Math.rint(amount)) > 0.005) {
+            formatter.setMinimumFractionDigits(2);
+            formatter.setMaximumFractionDigits(2);
+        } else {
+            formatter.setMinimumFractionDigits(0);
+            formatter.setMaximumFractionDigits(0);
+        }
+        return formatter.format(amount);
+    }
+
+    private String formatSignedWholeCurrency(double amount) {
+        NumberFormat formatter = NumberFormat.getCurrencyInstance(Locale.US);
+        formatter.setMinimumFractionDigits(0);
+        formatter.setMaximumFractionDigits(0);
+        String sign = amount >= 0 ? "+" : "-";
+        return sign + formatter.format(Math.abs(amount));
+    }
+
+    private String formatQuantity(Asset asset) {
+        if ("crypto".equalsIgnoreCase(asset.getType())) {
+            DecimalFormat formatter = new DecimalFormat(
+                    "0.####",
+                    DecimalFormatSymbols.getInstance(Locale.US)
+            );
+            return formatter.format(asset.getQuantity()) + " " + asset.getTicker();
+        }
+
+        if (Math.abs(asset.getQuantity() - 1) < 0.0001) {
+            return "1 share";
+        }
+        return Math.round(asset.getQuantity()) + " shares";
+    }
+
+    private HomeContract.View currentView() {
+        HomeContract.View currentView = view == null ? null : view.get();
+        if (currentView == null) {
+            throw new IllegalStateException("Home view is not attached.");
+        }
+        return currentView;
+    }
 }

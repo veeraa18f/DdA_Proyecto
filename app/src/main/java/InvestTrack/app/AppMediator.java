@@ -7,10 +7,10 @@ public class AppMediator {
   private LoginToHomeState loginToHomeState;
   private HomeToDetailState homeToDetailState;
   private DetailToManageState detailToManageState;
-  private ProfileToEditProfileState profileToEditProfileState;
-  private ProfileToLanguageState profileToLanguageState;
-  private ProfileToAppearanceState profileToAppearanceState;
-  private ProfileToTermsState profileToTermsState;
+  private ManageToHomeState manageToHomeState;
+  private HomeToFavoritesState homeToFavoritesState;
+
+  private UserState userState;
 
   public static AppMediator getInstance() {
     if (instance == null) {
@@ -19,14 +19,20 @@ public class AppMediator {
     return instance;
   }
 
+  // 🔹 Login → Home
+  public void setNextHomeScreenState(LoginToHomeState state) {
+    loginToHomeState = state;
+  }
+
   public LoginToHomeState getNextHomeScreenState() {
     LoginToHomeState state = loginToHomeState;
     loginToHomeState = null;
     return state;
   }
 
-  public void setNextHomeScreenState(LoginToHomeState state) {
-    loginToHomeState = state;
+  // 🔹 Home → Detail
+  public void setNextDetailScreenState(HomeToDetailState state) {
+    homeToDetailState = state;
   }
 
   public HomeToDetailState getNextDetailScreenState() {
@@ -35,8 +41,9 @@ public class AppMediator {
     return state;
   }
 
-  public void setNextDetailScreenState(HomeToDetailState state) {
-    homeToDetailState = state;
+  // 🔹 Detail → Manage
+  public void setNextManageScreenState(DetailToManageState state) {
+    detailToManageState = state;
   }
 
   public DetailToManageState getNextManageScreenState() {
@@ -45,47 +52,34 @@ public class AppMediator {
     return state;
   }
 
-  public void setNextManageScreenState(DetailToManageState state) {
-    detailToManageState = state;
+  // 🔹 Manage → Home
+  public void setPreviousHomeScreenState(ManageToHomeState state) {
+    manageToHomeState = state;
   }
 
-  public ProfileToEditProfileState getNextEditProfileScreenState() {
-    ProfileToEditProfileState state = profileToEditProfileState;
-    profileToEditProfileState = null;
+  public ManageToHomeState getPreviousHomeScreenState() {
+    ManageToHomeState state = manageToHomeState;
+    manageToHomeState = null;
     return state;
   }
 
-  public void setNextEditProfileScreenState(ProfileToEditProfileState state) {
-    profileToEditProfileState = state;
+  // 🔹 Home → Favorites
+  public void setNextFavoritesScreenState(HomeToFavoritesState state) {
+    homeToFavoritesState = state;
   }
 
-  public ProfileToLanguageState getNextLanguageScreenState() {
-    ProfileToLanguageState state = profileToLanguageState;
-    profileToLanguageState = null;
+  public HomeToFavoritesState getNextFavoritesScreenState() {
+    HomeToFavoritesState state = homeToFavoritesState;
+    homeToFavoritesState = null;
     return state;
   }
 
-  public void setNextLanguageScreenState(ProfileToLanguageState state) {
-    profileToLanguageState = state;
+  // 🔹 Usuario global
+  public void setUserState(UserState state) {
+    userState = state;
   }
 
-  public ProfileToAppearanceState getNextAppearanceScreenState() {
-    ProfileToAppearanceState state = profileToAppearanceState;
-    profileToAppearanceState = null;
-    return state;
-  }
-
-  public void setNextAppearanceScreenState(ProfileToAppearanceState state) {
-    profileToAppearanceState = state;
-  }
-
-  public ProfileToTermsState getNextTermsScreenState() {
-    ProfileToTermsState state = profileToTermsState;
-    profileToTermsState = null;
-    return state;
-  }
-
-  public void setNextTermsScreenState(ProfileToTermsState state) {
-    profileToTermsState = state;
+  public UserState getUserState() {
+    return userState;
   }
 }

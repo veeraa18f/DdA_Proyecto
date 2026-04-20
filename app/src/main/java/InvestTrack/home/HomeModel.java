@@ -1,126 +1,22 @@
 package InvestTrack.home;
 
-import android.util.Log;
+import android.content.Context;
+
+import java.util.List;
+
+import InvestTrack.data.Asset;
+import InvestTrack.data.InvestTrackRepository;
 
 public class HomeModel implements HomeContract.Model {
 
-<<<<<<< ours
-  public static String TAG = "InvesTrackSource.HomeModel";
+    private final InvestTrackRepository repository;
 
-  private String data;
-
-  public HomeModel(String data) {
-    this.data = data;
-  }
-
-  @Override
-  public String getStoredData() {
-    // Log.e(TAG, "getStoredData()");
-
-    return data;
-  }
-
-
-  @Override
-  public String getSavedData() {
-    // Log.e(TAG, "getSavedData()");
-
-    return data;
-  }
-
-
-  @Override
-  public String getCurrentData() {
-    // Log.e(TAG, "getCurrentData()");
-
-    return data;
-  }
-
-  @Override
-  public void setCurrentData(String data) {
-    // Log.e(TAG, "setCurrentData()");
-
-    this.data = data;
-  }
-
-  @Override
-  public void onUpdatedDataFromRecreatedScreen(String data) {
-    // Log.e(TAG, "onUpdatedDataFromRecreatedScreen()");
-
-
-  }
-
-  @Override
-  public void onUpdatedDataFromNextScreen(String data) {
-    // Log.e(TAG, "onUpdatedDataFromNextScreen()");
-
-
-  }
-
-  @Override
-  public void onUpdatedDataFromPreviousScreen(String data) {
-    // Log.e(TAG, "onUpdatedDataFromPreviousScreen()");
-
-
-  }
-=======
-    public static String TAG = "InvesTrackSource.HomeModel";
-
-    private String data;
-
-    public HomeModel(String data) {
-        this.data = data;
+    public HomeModel(Context context) {
+        repository = InvestTrackRepository.getInstance(context);
     }
 
     @Override
-    public String getStoredData() {
-        // Log.e(TAG, "getStoredData()");
-
-        return data;
+    public List<Asset> getAssets() {
+        return repository.getAllAssets();
     }
-
-
-    @Override
-    public String getSavedData() {
-        // Log.e(TAG, "getSavedData()");
-
-        return data;
-    }
-
-
-    @Override
-    public String getCurrentData() {
-        // Log.e(TAG, "getCurrentData()");
-
-        return data;
-    }
-
-    @Override
-    public void setCurrentData(String data) {
-        // Log.e(TAG, "setCurrentData()");
-
-        this.data = data;
-    }
-
-    @Override
-    public void onUpdatedDataFromRecreatedScreen(String data) {
-        // Log.e(TAG, "onUpdatedDataFromRecreatedScreen()");
-
-
-    }
-
-    @Override
-    public void onUpdatedDataFromNextScreen(String data) {
-        // Log.e(TAG, "onUpdatedDataFromNextScreen()");
-
-
-    }
-
-    @Override
-    public void onUpdatedDataFromPreviousScreen(String data) {
-        // Log.e(TAG, "onUpdatedDataFromPreviousScreen()");
-
-
-    }
->>>>>>> theirs
 }
