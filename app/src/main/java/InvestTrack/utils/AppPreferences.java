@@ -10,6 +10,8 @@ public final class AppPreferences {
     private static final String KEY_GUEST_MODE = "guest_mode";
     private static final String KEY_IS_FAVORITE = "is_favorite";
     private static final String KEY_DARK_MODE = "dark_mode";
+    private static final String KEY_PROFILE_PHOTO_INDEX = "profile_photo_index";
+    private static final String KEY_LANGUAGE_CODE = "language_code";
 
     private AppPreferences() {
     }
@@ -63,6 +65,28 @@ public final class AppPreferences {
         preferences(context)
                 .edit()
                 .putBoolean(KEY_DARK_MODE, enabled)
+                .apply();
+    }
+
+    public static int getProfilePhotoIndex(Context context) {
+        return preferences(context).getInt(KEY_PROFILE_PHOTO_INDEX, 1);
+    }
+
+    public static void setProfilePhotoIndex(Context context, int profilePhotoIndex) {
+        preferences(context)
+                .edit()
+                .putInt(KEY_PROFILE_PHOTO_INDEX, profilePhotoIndex)
+                .apply();
+    }
+
+    public static String getLanguageCode(Context context) {
+        return preferences(context).getString(KEY_LANGUAGE_CODE, LanguageHelper.LANGUAGE_ENGLISH);
+    }
+
+    public static void setLanguageCode(Context context, String languageCode) {
+        preferences(context)
+                .edit()
+                .putString(KEY_LANGUAGE_CODE, LanguageHelper.normalizeLanguageCode(languageCode))
                 .apply();
     }
 }

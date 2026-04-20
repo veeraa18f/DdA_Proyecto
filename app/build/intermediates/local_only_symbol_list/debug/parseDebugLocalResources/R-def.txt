@@ -1,5 +1,7 @@
 R_DEF: Internal format may change without notice
 local
+array language_options
+array profile_photo_options
 color bottom_nav_item_tint
 color colorBackground
 color colorBlack
@@ -58,6 +60,9 @@ drawable investtrack
 drawable logo_bitcoin
 drawable logo_microsoft
 drawable logo_tesla
+drawable profile_photo_1
+drawable profile_photo_2
+drawable profile_photo_3
 id bottom_nav_detail
 id bottom_nav_favorites
 id bottom_nav_home
@@ -66,6 +71,7 @@ id btn_cancel_manage
 id btn_detail_back
 id btn_detail_favorite
 id btn_manage_investment
+id btn_profile_change_photo
 id btn_profile_logout
 id btn_register_back
 id btn_register_submit
@@ -80,6 +86,7 @@ id filter_home_stock
 id input_home_search
 id iv_detail_logo
 id iv_investment_logo
+id iv_profile_photo
 id iv_splash_logo
 id login_button
 id login_container
@@ -95,6 +102,7 @@ id menu_favorites
 id menu_home
 id menu_profile
 id row_profile_dark_mode
+id row_profile_language
 id switch_profile_dark_mode
 id tv_detail_asset_meta
 id tv_detail_asset_name
@@ -111,6 +119,7 @@ id tv_investment_profit
 id tv_investment_quantity
 id tv_investment_ticker
 id tv_investment_type
+id tv_profile_language_value
 id tv_splash_title
 layout activity_detail
 layout activity_favorites
@@ -153,9 +162,12 @@ string cd_back
 string cd_favorite
 string cd_investtrack_logo
 string cd_portfolio_logo
+string cd_profile_photo
 string detail_company_name
+string detail_error_asset_not_found
 string detail_subtitle
 string detail_title
+string detail_value_format
 string favorite_added
 string favorite_removed
 string favorites_subtitle
@@ -166,18 +178,38 @@ string filter_stock
 string home_balance_change
 string home_balance_value
 string home_empty_assets
+string home_error_data_not_ready
 string home_greeting
 string home_portfolio_label
 string home_search_hint
+string home_total_profit_format
 string investment_updated
+string language_english
+string language_spanish
+string login_action
+string login_email_hint
+string login_email_label
 string login_error_invalid_credentials
+string login_forgot_password
+string login_guest
+string login_password_hint
+string login_password_label
+string login_signup
+string login_title
 string manage_subtitle
 string manage_title
+string profile_change_photo
 string profile_id_value
 string profile_name
 string profile_option_dark_mode
+string profile_option_language
 string profile_option_logout
 string profile_title
+string quantity_one_share
+string quantity_shares_format
+string register_hint_email
+string register_hint_name
+string register_hint_password
 string register_success
 string register_title
 string section_favorites

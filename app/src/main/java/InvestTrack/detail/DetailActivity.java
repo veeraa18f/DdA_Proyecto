@@ -47,7 +47,7 @@ public class DetailActivity extends AppCompatActivity implements DetailContract.
         valueText = findViewById(R.id.tv_detail_asset_value);
         profitText = findViewById(R.id.tv_detail_asset_profit);
 
-        presenter = new DetailPresenter();
+        presenter = new DetailPresenter(this);
         injectPresenter(presenter);
         presenter.injectView(new WeakReference<>(this));
         presenter.injectModel(new DetailModel(this));

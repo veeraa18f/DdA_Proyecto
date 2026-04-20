@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="language_options">
+        <item>English</item>
+        <item>Spanish</item>
+    </string-array>
+    <string-array name="profile_photo_options">
+        <item>Profile photo 1</item>
+        <item>Profile photo 2</item>
+        <item>Profile photo 3</item>
+    </string-array>
     <color name="colorBackground">#F4F3F1</color>
     <color name="colorBlack">#000000</color>
     <color name="colorBorder">#5F6660</color>
@@ -65,9 +74,12 @@
     <string name="cd_favorite">Favorite asset</string>
     <string name="cd_investtrack_logo">InvestTrack logo</string>
     <string name="cd_portfolio_logo">Investment logo</string>
+    <string name="cd_profile_photo">Profile photo</string>
     <string name="detail_company_name">Tesla</string>
+    <string name="detail_error_asset_not_found">Asset not found.</string>
     <string name="detail_subtitle">Your position and favorite shortcut.</string>
     <string name="detail_title">Asset detail</string>
+    <string name="detail_value_format">Value %1$s</string>
     <string name="favorite_added">Added to favorites.</string>
     <string name="favorite_removed">Removed from favorites.</string>
     <string name="favorites_subtitle">Assets you marked to revisit quickly.</string>
@@ -78,18 +90,38 @@
     <string name="home_balance_change">+12.8%% this month</string>
     <string name="home_balance_value">$124,830.00</string>
     <string name="home_empty_assets">No assets match your search.</string>
+    <string name="home_error_data_not_ready">Home data is not ready.</string>
     <string name="home_greeting">Good morning</string>
     <string name="home_portfolio_label">Total balance</string>
     <string name="home_search_hint">Search your assets</string>
+    <string name="home_total_profit_format">%1$s total profit</string>
     <string name="investment_updated">Investment updated.</string>
+    <string name="language_english">English</string>
+    <string name="language_spanish">Spanish</string>
+    <string name="login_action">Log in</string>
+    <string name="login_email_hint">example@example.com</string>
+    <string name="login_email_label">Username or email</string>
     <string name="login_error_invalid_credentials">Enter a valid email and a password with at least 6 characters.</string>
+    <string name="login_forgot_password">Forgot password?</string>
+    <string name="login_guest">Guest mode</string>
+    <string name="login_password_hint">••••••••</string>
+    <string name="login_password_label">Password</string>
+    <string name="login_signup">Sign up</string>
+    <string name="login_title">Welcome</string>
     <string name="manage_subtitle">Update your position review.</string>
     <string name="manage_title">Manage investment</string>
+    <string name="profile_change_photo">Change profile photo</string>
     <string name="profile_id_value">Demo session</string>
     <string name="profile_name">Guest investor</string>
     <string name="profile_option_dark_mode">Dark mode</string>
+    <string name="profile_option_language">Language</string>
     <string name="profile_option_logout">Log out</string>
     <string name="profile_title">Profile</string>
+    <string name="quantity_one_share">1 share</string>
+    <string name="quantity_shares_format">%1$d shares</string>
+    <string name="register_hint_email">Email</string>
+    <string name="register_hint_name">Name</string>
+    <string name="register_hint_password">Password</string>
     <string name="register_success">Account created successfully.</string>
     <string name="register_title">Create your account</string>
     <string name="section_favorites">Favorites</string>

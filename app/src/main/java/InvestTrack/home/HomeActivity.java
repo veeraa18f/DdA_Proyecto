@@ -53,7 +53,7 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.View
         filterCryptoButton = findViewById(R.id.filter_home_crypto);
         emptyAssetsText = findViewById(R.id.tv_home_empty_assets);
 
-        presenter = new HomePresenter();
+        presenter = new HomePresenter(this);
         injectPresenter(presenter);
         presenter.injectView(new WeakReference<>(this));
         presenter.injectModel(new HomeModel(this));

@@ -1,5 +1,7 @@
 package InvestTrack.home;
 
+import android.content.Context;
+
 import java.lang.ref.WeakReference;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
@@ -11,6 +13,7 @@ import java.util.Locale;
 import InvestTrack.app.AppMediator;
 import InvestTrack.app.HomeToDetailState;
 import InvestTrack.data.Asset;
+import com.tuempresa.investtrack.R;
 
 public class HomePresenter implements HomeContract.Presenter {
 
@@ -19,6 +22,7 @@ public class HomePresenter implements HomeContract.Presenter {
     public static final String FILTER_CRYPTO = "Crypto";
 
     private final AppMediator mediator;
+    private final Context context;
     private WeakReference<HomeContract.View> view;
     private HomeContract.Model model;
     private List<Asset> allAssets = new ArrayList<>();
@@ -26,11 +30,20 @@ public class HomePresenter implements HomeContract.Presenter {
     private String selectedFilter = FILTER_ALL;
 
     public HomePresenter() {
-        this(AppMediator.getInstance());
+        this(AppMediator.getInstance(), null);
+    }
+
+    public HomePresenter(Context context) {
+        this(AppMediator.getInstance(), context);
     }
 
     public HomePresenter(AppMediator mediator) {
+        this(mediator, null);
+    }
+
+    public HomePresenter(AppMediator mediator, Context context) {
         this.mediator = mediator;
+        this.context = context;
     }
 
     @Override
@@ -46,7 +59,7 @@ public class HomePresenter implements HomeContract.Presenter {
     @Override
     public void onCreateCalled() {
         if (model == null) {
-            currentView().showError("Home data is not ready.");
+            currentView().showError(getString(R.string.home_error_data_not_ready, "Home data is not ready."));
             return;
         }
 
@@ -132,7 +145,11 @@ public class HomePresenter implements HomeContract.Presenter {
         }
 
         viewModel.totalBalanceText = formatCurrency(totalValue, true);
-        viewModel.totalChangeText = formatSignedWholeCurrency(totalProfit) + " total profit";
+        viewModel.totalChangeText = getString(
+                R.string.home_total_profit_format,
+                "%1$s total profit",
+                formatSignedWholeCurrency(totalProfit)
+        );
         viewModel.searchQuery = searchQuery;
         viewModel.selectedFilter = selectedFilter;
         return viewModel;
@@ -143,7 +160,7 @@ public class HomePresenter implements HomeContract.Presenter {
         viewModel.assetId = asset.getId();
         viewModel.name = asset.getName();
         viewModel.ticker = asset.getTicker();
-        viewModel.type = asset.getType();
+        viewModel.type = formatAssetType(asset);
         viewModel.priceText = formatCurrency(asset.getCurrentPrice(), false);
         viewModel.quantityText = formatQuantity(asset);
         viewModel.profitText = formatSignedWholeCurrency(asset.getProfit());
@@ -182,9 +199,27 @@ public class HomePresenter implements HomeContract.Presenter {
         }
 
         if (Math.abs(asset.getQuantity() - 1) < 0.0001) {
-            return "1 share";
+            return getString(R.string.quantity_one_share, "1 share");
         }
-        return Math.round(asset.getQuantity()) + " shares";
+        return getString(
+                R.string.quantity_shares_format,
+                "%1$d shares",
+                Math.round(asset.getQuantity())
+        );
+    }
+
+    private String formatAssetType(Asset asset) {
+        if (FILTER_CRYPTO.equalsIgnoreCase(asset.getType())) {
+            return getString(R.string.asset_type_crypto, "Crypto");
+        }
+        return getString(R.string.asset_type_stock, "Stock");
+    }
+
+    private String getString(int stringRes, String fallback, Object... args) {
+        if (context == null) {
+            return args.length == 0 ? fallback : String.format(Locale.US, fallback, args);
+        }
+        return context.getString(stringRes, args);
     }
 
     private HomeContract.View currentView() {

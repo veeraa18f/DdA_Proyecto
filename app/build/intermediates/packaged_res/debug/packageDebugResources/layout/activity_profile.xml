@@ -15,12 +15,15 @@
         android:padding="@dimen/spacing_xxl">
 
         <ImageView
+            android:id="@+id/iv_profile_photo"
             android:layout_width="92dp"
             android:layout_height="92dp"
             android:adjustViewBounds="true"
-            android:contentDescription="@string/cd_portfolio_logo"
+            android:clickable="true"
+            android:contentDescription="@string/cd_profile_photo"
+            android:focusable="true"
             android:scaleType="fitCenter"
-            android:src="@drawable/logo_microsoft" />
+            android:src="@drawable/profile_photo_1" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -47,11 +50,53 @@
             android:textColor="@color/colorTextSecondary"
             android:textSize="@dimen/text_body" />
 
+        <Button
+            android:id="@+id/btn_profile_change_photo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/spacing_xxl"
+            android:background="@drawable/bg_button_primary"
+            android:backgroundTint="@null"
+            android:text="@string/profile_change_photo"
+            android:textAllCaps="false"
+            android:textColor="@color/colorTextPrimary"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/row_profile_language"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:background="@drawable/bg_card"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/spacing_lg">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/profile_option_language"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="@dimen/text_body_large"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_profile_language_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/language_english"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="@dimen/text_body" />
+        </LinearLayout>
+
         <LinearLayout
             android:id="@+id/row_profile_dark_mode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_xxl"
+            android:layout_marginTop="@dimen/spacing_lg"
             android:background="@drawable/bg_card"
             android:gravity="center_vertical"
             android:orientation="horizontal"
