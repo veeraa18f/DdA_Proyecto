@@ -1,6 +1,16 @@
 {
   "assets": [
     {
+      "id": "aapl",
+      "name": "Apple",
+      "ticker": "AAPL",
+      "type": "Stock",
+      "currentPrice": 195.64,
+      "quantity": 10,
+      "averagePrice": 171.2,
+      "logoDrawableName": "logo_apple"
+    },
+    {
       "id": "msft",
       "name": "Microsoft",
       "ticker": "MSFT",
@@ -9,6 +19,46 @@
       "quantity": 8,
       "averagePrice": 305.9,
       "logoDrawableName": "logo_microsoft"
+    },
+    {
+      "id": "googl",
+      "name": "Alphabet",
+      "ticker": "GOOGL",
+      "type": "Stock",
+      "currentPrice": 175.34,
+      "quantity": 6,
+      "averagePrice": 142.5,
+      "logoDrawableName": "logo_google"
+    },
+    {
+      "id": "amzn",
+      "name": "Amazon",
+      "ticker": "AMZN",
+      "type": "Stock",
+      "currentPrice": 184.3,
+      "quantity": 7,
+      "averagePrice": 149.75,
+      "logoDrawableName": "logo_amazon"
+    },
+    {
+      "id": "nvda",
+      "name": "Nvidia",
+      "ticker": "NVDA",
+      "type": "Stock",
+      "currentPrice": 881.86,
+      "quantity": 3,
+      "averagePrice": 620.5,
+      "logoDrawableName": "logo_nvidia"
+    },
+    {
+      "id": "meta",
+      "name": "Meta Platforms",
+      "ticker": "META",
+      "type": "Stock",
+      "currentPrice": 482.12,
+      "quantity": 4,
+      "averagePrice": 318.8,
+      "logoDrawableName": "logo_meta"
     },
     {
       "id": "btc",
@@ -21,6 +71,26 @@
       "logoDrawableName": "logo_bitcoin"
     },
     {
+      "id": "eth",
+      "name": "Ethereum",
+      "ticker": "ETH",
+      "type": "Crypto",
+      "currentPrice": 3150.4,
+      "quantity": 1.6,
+      "averagePrice": 2420.0,
+      "logoDrawableName": "logo_ethereum"
+    },
+    {
+      "id": "sol",
+      "name": "Solana",
+      "ticker": "SOL",
+      "type": "Crypto",
+      "currentPrice": 145.8,
+      "quantity": 18,
+      "averagePrice": 96.4,
+      "logoDrawableName": "logo_solana"
+    },
+    {
       "id": "tsla",
       "name": "Tesla",
       "ticker": "TSLA",
@@ -31,54 +101,134 @@
       "logoDrawableName": "logo_tesla"
     },
     {
-      "id": "aapl",
-      "name": "Apple",
-      "ticker": "AAPL",
+      "id": "jpm",
+      "name": "JPMorgan Chase",
+      "ticker": "JPM",
       "type": "Stock",
-      "currentPrice": 195.64,
-      "quantity": 10,
-      "averagePrice": 171.2,
-      "logoDrawableName": "ic_chart_line"
+      "currentPrice": 197.45,
+      "quantity": 9,
+      "averagePrice": 168.1,
+      "logoDrawableName": "logo_jpmorgan"
     },
     {
-      "id": "nvda",
-      "name": "Nvidia",
-      "ticker": "NVDA",
+      "id": "v",
+      "name": "Visa",
+      "ticker": "V",
       "type": "Stock",
-      "currentPrice": 881.86,
+      "currentPrice": 278.32,
+      "quantity": 6,
+      "averagePrice": 221.4,
+      "logoDrawableName": "logo_visa"
+    },
+    {
+      "id": "wmt",
+      "name": "Walmart",
+      "ticker": "WMT",
+      "type": "Stock",
+      "currentPrice": 68.14,
+      "quantity": 20,
+      "averagePrice": 54.7,
+      "logoDrawableName": "logo_walmart"
+    },
+    {
+      "id": "xom",
+      "name": "Exxon Mobil",
+      "ticker": "XOM",
+      "type": "Stock",
+      "currentPrice": 118.52,
+      "quantity": 12,
+      "averagePrice": 101.3,
+      "logoDrawableName": "logo_exxon"
+    },
+    {
+      "id": "unh",
+      "name": "UnitedHealth Group",
+      "ticker": "UNH",
+      "type": "Stock",
+      "currentPrice": 522.4,
       "quantity": 3,
-      "averagePrice": 620.5,
-      "logoDrawableName": "ic_chart_line"
+      "averagePrice": 463.8,
+      "logoDrawableName": "logo_unitedhealth"
     },
     {
-      "id": "amzn",
-      "name": "Amazon",
-      "ticker": "AMZN",
+      "id": "jnj",
+      "name": "Johnson & Johnson",
+      "ticker": "JNJ",
       "type": "Stock",
-      "currentPrice": 184.3,
-      "quantity": 7,
-      "averagePrice": 149.75,
-      "logoDrawableName": "ic_chart_line"
+      "currentPrice": 156.9,
+      "quantity": 8,
+      "averagePrice": 145.2,
+      "logoDrawableName": "logo_johnson_johnson"
     },
     {
-      "id": "eth",
-      "name": "Ethereum",
-      "ticker": "ETH",
-      "type": "Crypto",
-      "currentPrice": 3150.4,
-      "quantity": 1.6,
-      "averagePrice": 2420.0,
-      "logoDrawableName": "logo_bitcoin"
+      "id": "pg",
+      "name": "Procter & Gamble",
+      "ticker": "PG",
+      "type": "Stock",
+      "currentPrice": 164.55,
+      "quantity": 9,
+      "averagePrice": 139.4,
+      "logoDrawableName": "logo_procter_gamble"
     },
     {
-      "id": "sol",
-      "name": "Solana",
-      "ticker": "SOL",
-      "type": "Crypto",
-      "currentPrice": 145.8,
-      "quantity": 18,
-      "averagePrice": 96.4,
-      "logoDrawableName": "logo_bitcoin"
+      "id": "ma",
+      "name": "Mastercard",
+      "ticker": "MA",
+      "type": "Stock",
+      "currentPrice": 472.86,
+      "quantity": 3,
+      "averagePrice": 391.1,
+      "logoDrawableName": "logo_mastercard"
+    },
+    {
+      "id": "hd",
+      "name": "Home Depot",
+      "ticker": "HD",
+      "type": "Stock",
+      "currentPrice": 342.18,
+      "quantity": 4,
+      "averagePrice": 297.8,
+      "logoDrawableName": "logo_home_depot"
+    },
+    {
+      "id": "cost",
+      "name": "Costco",
+      "ticker": "COST",
+      "type": "Stock",
+      "currentPrice": 728.4,
+      "quantity": 2,
+      "averagePrice": 563.2,
+      "logoDrawableName": "logo_costco"
+    },
+    {
+      "id": "nflx",
+      "name": "Netflix",
+      "ticker": "NFLX",
+      "type": "Stock",
+      "currentPrice": 627.46,
+      "quantity": 2,
+      "averagePrice": 411.6,
+      "logoDrawableName": "logo_netflix"
+    },
+    {
+      "id": "orcl",
+      "name": "Oracle",
+      "ticker": "ORCL",
+      "type": "Stock",
+      "currentPrice": 124.72,
+      "quantity": 11,
+      "averagePrice": 91.8,
+      "logoDrawableName": "logo_oracle"
+    },
+    {
+      "id": "dis",
+      "name": "Disney",
+      "ticker": "DIS",
+      "type": "Stock",
+      "currentPrice": 112.6,
+      "quantity": 10,
+      "averagePrice": 96.35,
+      "logoDrawableName": "logo_disney"
     }
   ]
 }

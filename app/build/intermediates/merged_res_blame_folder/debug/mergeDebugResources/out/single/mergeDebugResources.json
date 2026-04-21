@@ -8,28 +8,44 @@
         "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\drawable\\bottom_nav_item_background.xml"
     },
     {
-        "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\layout_activity_login.xml.flat",
-        "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\layout\\activity_login.xml"
+        "merged": "com.tuempresa.investtrack.app-debug-34:/drawable_logo_ethereum.png.flat",
+        "source": "com.tuempresa.investtrack.app-main-36:/drawable/logo_ethereum.png"
     },
     {
-        "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\layout_activity_home.xml.flat",
-        "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\layout\\activity_home.xml"
+        "merged": "com.tuempresa.investtrack.app-debug-34:/drawable_logo_mastercard.png.flat",
+        "source": "com.tuempresa.investtrack.app-main-36:/drawable/logo_mastercard.png"
+    },
+    {
+        "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\layout\\activity_login.xml"
     },
     {
         "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\layout_activity_profile.xml.flat",
         "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\layout\\activity_profile.xml"
     },
     {
+        "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\layout_activity_home.xml.flat",
+        "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\layout\\activity_home.xml"
+    },
+    {
         "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\drawable_bg_top_section.xml.flat",
         "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\drawable\\bg_top_section.xml"
+    },
+    {
+        "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\drawable_bg_modal.xml.flat",
+        "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\drawable\\bg_modal.xml"
     },
     {
         "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\layout_activity_register.xml.flat",
         "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\layout\\activity_register.xml"
     },
     {
-        "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\drawable_bg_modal.xml.flat",
-        "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\drawable\\bg_modal.xml"
+        "merged": "com.tuempresa.investtrack.app-debug-34:/drawable_logo_unitedhealth.png.flat",
+        "source": "com.tuempresa.investtrack.app-main-36:/drawable/logo_unitedhealth.png"
+    },
+    {
+        "merged": "com.tuempresa.investtrack.app-debug-34:/drawable_logo_apple.png.flat",
+        "source": "com.tuempresa.investtrack.app-main-36:/drawable/logo_apple.png"
     },
     {
         "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\drawable_bg_button_primary.xml.flat",
@@ -40,8 +56,16 @@
         "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\drawable\\logo_bitcoin.png"
     },
     {
+        "merged": "com.tuempresa.investtrack.app-debug-34:/drawable_logo_solana.png.flat",
+        "source": "com.tuempresa.investtrack.app-main-36:/drawable/logo_solana.png"
+    },
+    {
         "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\drawable_ic_favorite.xml.flat",
         "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\drawable\\ic_favorite.xml"
+    },
+    {
+        "merged": "com.tuempresa.investtrack.app-debug-34:/drawable_logo_costco.png.flat",
+        "source": "com.tuempresa.investtrack.app-main-36:/drawable/logo_costco.png"
     },
     {
         "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\drawable_ic_back.xml.flat",
@@ -56,20 +80,28 @@
         "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\drawable\\bg_profit_badge.xml"
     },
     {
-        "merged": "com.tuempresa.investtrack.app-debug-34:/drawable_bg_manage_card.xml.flat",
-        "source": "com.tuempresa.investtrack.app-main-36:/drawable/bg_manage_card.xml"
+        "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\drawable_bg_manage_input.xml.flat",
+        "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\drawable\\bg_manage_input.xml"
+    },
+    {
+        "merged": "com.tuempresa.investtrack.app-debug-34:/drawable_logo_disney.png.flat",
+        "source": "com.tuempresa.investtrack.app-main-36:/drawable/logo_disney.png"
+    },
+    {
+        "merged": "com.tuempresa.investtrack.app-debug-34:/drawable_logo_walmart.png.flat",
+        "source": "com.tuempresa.investtrack.app-main-36:/drawable/logo_walmart.png"
     },
     {
         "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\layout_activity_favorites.xml.flat",
         "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\layout\\activity_favorites.xml"
     },
     {
-        "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\layout_item_favorite.xml.flat",
-        "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\layout\\item_favorite.xml"
+        "merged": "com.tuempresa.investtrack.app-debug-34:/drawable_logo_home_depot.png.flat",
+        "source": "com.tuempresa.investtrack.app-main-36:/drawable/logo_home_depot.png"
     },
     {
-        "merged": "com.tuempresa.investtrack.app-debug-34:/drawable_bg_manage_cancel_button.xml.flat",
-        "source": "com.tuempresa.investtrack.app-main-36:/drawable/bg_manage_cancel_button.xml"
+        "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\layout_item_favorite.xml.flat",
+        "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\layout\\item_favorite.xml"
     },
     {
         "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\drawable_bg_card.xml.flat",
@@ -80,16 +112,28 @@
         "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\drawable\\ic_chart_line_year.xml"
     },
     {
-        "merged": "com.tuempresa.investtrack.app-debug-34:/drawable_bg_manage_update_button.xml.flat",
-        "source": "com.tuempresa.investtrack.app-main-36:/drawable/bg_manage_update_button.xml"
+        "merged": "com.tuempresa.investtrack.app-debug-34:/drawable_logo_nvidia.png.flat",
+        "source": "com.tuempresa.investtrack.app-main-36:/drawable/logo_nvidia.png"
+    },
+    {
+        "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\drawable_bg_manage_panel.xml.flat",
+        "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\drawable\\bg_manage_panel.xml"
     },
     {
         "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\drawable_logo_microsoft.png.flat",
         "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\drawable\\logo_microsoft.png"
     },
     {
-        "merged": "com.tuempresa.investtrack.app-debug-34:/drawable_bg_manage_header.xml.flat",
-        "source": "com.tuempresa.investtrack.app-main-36:/drawable/bg_manage_header.xml"
+        "merged": "com.tuempresa.investtrack.app-debug-34:/drawable_logo_johnson_johnson.png.flat",
+        "source": "com.tuempresa.investtrack.app-main-36:/drawable/logo_johnson_johnson.png"
+    },
+    {
+        "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\drawable_bg_manage_cancel_button.xml.flat",
+        "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\drawable\\bg_manage_cancel_button.xml"
+    },
+    {
+        "merged": "com.tuempresa.investtrack.app-debug-34:/drawable_logo_jpmorgan.png.flat",
+        "source": "com.tuempresa.investtrack.app-main-36:/drawable/logo_jpmorgan.png"
     },
     {
         "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\drawable_ic_chart_line_day.xml.flat",
@@ -100,6 +144,10 @@
         "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\drawable\\profile_photo_3.png"
     },
     {
+        "merged": "com.tuempresa.investtrack.app-debug-34:/drawable_logo_netflix.png.flat",
+        "source": "com.tuempresa.investtrack.app-main-36:/drawable/logo_netflix.png"
+    },
+    {
         "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\layout_activity_edit_profile.xml.flat",
         "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\layout\\activity_edit_profile.xml"
     },
@@ -108,8 +156,8 @@
         "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\drawable\\bg_edittext.xml"
     },
     {
-        "merged": "com.tuempresa.investtrack.app-debug-34:/drawable_bg_manage_panel.xml.flat",
-        "source": "com.tuempresa.investtrack.app-main-36:/drawable/bg_manage_panel.xml"
+        "merged": "com.tuempresa.investtrack.app-debug-34:/drawable_logo_meta.png.flat",
+        "source": "com.tuempresa.investtrack.app-main-36:/drawable/logo_meta.png"
     },
     {
         "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\drawable_bg_input_login.xml.flat",
@@ -118,6 +166,18 @@
     {
         "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\drawable_ic_favorite_star.png.flat",
         "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\drawable\\ic_favorite_star.png"
+    },
+    {
+        "merged": "com.tuempresa.investtrack.app-debug-34:/drawable_logo_google.png.flat",
+        "source": "com.tuempresa.investtrack.app-main-36:/drawable/logo_google.png"
+    },
+    {
+        "merged": "com.tuempresa.investtrack.app-debug-34:/drawable_logo_visa.png.flat",
+        "source": "com.tuempresa.investtrack.app-main-36:/drawable/logo_visa.png"
+    },
+    {
+        "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\drawable_bg_manage_card.xml.flat",
+        "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\drawable\\bg_manage_card.xml"
     },
     {
         "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\drawable_ic_chart_line_week.xml.flat",
@@ -136,12 +196,16 @@
         "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\drawable\\bg_chip.xml"
     },
     {
-        "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\drawable_investtrack.png.flat",
-        "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\drawable\\investtrack.png"
+        "merged": "com.tuempresa.investtrack.app-debug-34:/drawable_logo_procter_gamble.png.flat",
+        "source": "com.tuempresa.investtrack.app-main-36:/drawable/logo_procter_gamble.png"
     },
     {
-        "merged": "com.tuempresa.investtrack.app-debug-34:/layout_activity_manage_investment.xml.flat",
-        "source": "com.tuempresa.investtrack.app-main-36:/layout/activity_manage_investment.xml"
+        "merged": "com.tuempresa.investtrack.app-debug-34:/drawable_logo_amazon.png.flat",
+        "source": "com.tuempresa.investtrack.app-main-36:/drawable/logo_amazon.png"
+    },
+    {
+        "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\drawable_investtrack.png.flat",
+        "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\drawable\\investtrack.png"
     },
     {
         "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\drawable_profile_photo_2.png.flat",
@@ -150,6 +214,10 @@
     {
         "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\layout_activity_detail.xml.flat",
         "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\layout\\activity_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\drawable_bg_manage_header.xml.flat",
+        "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\drawable\\bg_manage_header.xml"
     },
     {
         "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\drawable_ic_favorite_outline.xml.flat",
@@ -168,12 +236,16 @@
         "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\layout\\item_investment.xml"
     },
     {
-        "merged": "com.tuempresa.investtrack.app-debug-34:/drawable_bg_manage_input.xml.flat",
-        "source": "com.tuempresa.investtrack.app-main-36:/drawable/bg_manage_input.xml"
+        "merged": "com.tuempresa.investtrack.app-debug-34:/drawable_logo_exxon.png.flat",
+        "source": "com.tuempresa.investtrack.app-main-36:/drawable/logo_exxon.png"
     },
     {
         "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\layout_activity_manage_investment.xml.flat",
         "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\layout\\activity_manage_investment.xml"
+    },
+    {
+        "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\drawable_bg_manage_update_button.xml.flat",
+        "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\drawable\\bg_manage_update_button.xml"
     },
     {
         "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\drawable_bg_login_card.xml.flat",
@@ -186,6 +258,10 @@
     {
         "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\drawable_ic_home.xml.flat",
         "source": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-main-36:\\drawable\\ic_home.xml"
+    },
+    {
+        "merged": "com.tuempresa.investtrack.app-debug-34:/drawable_logo_oracle.png.flat",
+        "source": "com.tuempresa.investtrack.app-main-36:/drawable/logo_oracle.png"
     },
     {
         "merged": "C:\\Users\\veera\\.gradle\\daemon\\8.10.2\\com.tuempresa.investtrack.app-debug-34:\\drawable_bg_chip_selected.xml.flat",

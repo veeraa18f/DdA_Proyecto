@@ -20,6 +20,7 @@
             android:textStyle="bold" />
 
         <EditText
+            android:id="@+id/input_register_name"
             style="@style/Widget.InvestTrack.EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -28,6 +29,7 @@
             android:inputType="textPersonName" />
 
         <EditText
+            android:id="@+id/input_register_email"
             style="@style/Widget.InvestTrack.EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -36,6 +38,7 @@
             android:inputType="textEmailAddress" />
 
         <EditText
+            android:id="@+id/input_register_password"
             style="@style/Widget.InvestTrack.EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

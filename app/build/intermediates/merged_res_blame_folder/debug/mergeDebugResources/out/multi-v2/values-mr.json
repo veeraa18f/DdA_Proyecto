@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.tuempresa.investtrack.app-mergeDebugResources-29:/values-mr/values-mr.xml",
+            "outputFile": "com.tuempresa.investtrack.app-mergeDebugResources-32:/values-mr/values-mr.xml",
             "map": [
                 {
                     "source": "C:\\Users\\veera\\.gradle\\caches\\8.10.2\\transforms\\20644ae5d6716e0394720b589bfb78d2\\transformed\\core-1.13.0\\res\\values-mr\\values-mr.xml",
