@@ -6,13 +6,18 @@
     android:background="@color/colorBackground"
     android:orientation="vertical">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
-        android:padding="@dimen/spacing_xxl">
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_xxl">
 
         <ImageView
             android:id="@+id/iv_profile_photo"
@@ -35,6 +40,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/tv_profile_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_sm"
@@ -43,10 +49,20 @@
             android:textSize="@dimen/text_body_large" />
 
         <TextView
+            android:id="@+id/tv_profile_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_xs"
-            android:text="@string/profile_id_value"
+            android:text="@string/profile_email_default"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="@dimen/text_body" />
+
+        <TextView
+            android:id="@+id/tv_profile_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xs"
+            android:text="@string/profile_phone_default"
             android:textColor="@color/colorTextSecondary"
             android:textSize="@dimen/text_body" />
 
@@ -58,6 +74,18 @@
             android:background="@drawable/bg_button_primary"
             android:backgroundTint="@null"
             android:text="@string/profile_change_photo"
+            android:textAllCaps="false"
+            android:textColor="@color/colorTextPrimary"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_profile_edit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:background="@drawable/bg_button_secondary"
+            android:backgroundTint="@null"
+            android:text="@string/profile_option_edit_profile"
             android:textAllCaps="false"
             android:textColor="@color/colorTextPrimary"
             android:textStyle="bold" />
@@ -129,7 +157,8 @@
             android:textAllCaps="false"
             android:textColor="@color/colorTextPrimary"
             android:textStyle="bold" />
-    </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
     <FrameLayout
         android:layout_width="match_parent"

@@ -9,11 +9,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.tuempresa.investtrack.R;
 
+import InvestTrack.data.InvestTrackRepository;
+import InvestTrack.data.UserEntity;
+import InvestTrack.forgot.ForgotPasswordActivity;
 import InvestTrack.home.HomeActivity;
 import InvestTrack.register.RegisterActivity;
 import InvestTrack.utils.AppPreferences;
 
 public class LoginActivity extends AppCompatActivity {
+
+    private InvestTrackRepository repository;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         setTitle(R.string.app_name);
 
+        repository = InvestTrackRepository.getInstance(this);
         EditText emailInput = findViewById(R.id.login_email_input);
         EditText passwordInput = findViewById(R.id.login_password_input);
 
@@ -31,12 +37,20 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(this, R.string.login_error_invalid_credentials, Toast.LENGTH_SHORT).show();
                 return;
             }
-            AppPreferences.setLoggedIn(this, true);
+            UserEntity user = repository.authenticateUser(email, password);
+            if (user == null) {
+                Toast.makeText(this, R.string.login_error_invalid_credentials, Toast.LENGTH_SHORT).show();
+                return;
+            }
+            AppPreferences.setLoggedIn(this, true, user.id);
             openHome();
         });
 
         findViewById(R.id.login_signup_button).setOnClickListener(view ->
                 startActivity(new Intent(this, RegisterActivity.class)));
+
+        findViewById(R.id.login_forgot_password).setOnClickListener(view ->
+                startActivity(new Intent(this, ForgotPasswordActivity.class)));
 
         findViewById(R.id.login_guest_button).setOnClickListener(view -> {
             AppPreferences.enableGuestMode(this);

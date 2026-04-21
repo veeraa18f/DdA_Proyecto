@@ -29,12 +29,24 @@
             android:textColor="@color/colorTextSecondary"
             android:textSize="@dimen/text_body_large" />
 
-        <include
-            android:id="@+id/card_favorite_primary"
-            layout="@layout/item_favorite"
+        <LinearLayout
+            android:id="@+id/container_favorites_assets"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_xxl" />
+            android:orientation="vertical" />
+
+        <TextView
+            android:id="@+id/tv_favorites_empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xxl"
+            android:background="@drawable/bg_card"
+            android:gravity="center"
+            android:padding="@dimen/spacing_xl"
+            android:text="@string/favorites_empty"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="@dimen/text_body"
+            android:visibility="gone" />
     </LinearLayout>
 
     <FrameLayout

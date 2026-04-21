@@ -13,6 +13,7 @@ import java.util.Locale;
 import InvestTrack.app.AppMediator;
 import InvestTrack.app.HomeToDetailState;
 import InvestTrack.data.Asset;
+import InvestTrack.utils.AppPreferences;
 import com.tuempresa.investtrack.R;
 
 public class HomePresenter implements HomeContract.Presenter {
@@ -142,6 +143,14 @@ public class HomePresenter implements HomeContract.Presenter {
 
         for (Asset asset : visibleAssets) {
             viewModel.assets.add(buildAssetViewModel(asset));
+        }
+
+        if (context != null && !AppPreferences.isGuestMode(context)) {
+            for (Asset asset : allAssets) {
+                if (AppPreferences.isFavorite(context, asset.getId())) {
+                    viewModel.favoriteAssets.add(buildAssetViewModel(asset));
+                }
+            }
         }
 
         viewModel.totalBalanceText = formatCurrency(totalValue, true);

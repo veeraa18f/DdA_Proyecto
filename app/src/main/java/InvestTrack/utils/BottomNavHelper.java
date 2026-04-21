@@ -1,6 +1,7 @@
 package InvestTrack.utils;
 
 import android.content.Intent;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -40,6 +41,10 @@ public final class BottomNavHelper {
             return new Intent(activity, HomeActivity.class);
         }
         if (selectedItemId == R.id.menu_favorites) {
+            if (AppPreferences.isGuestMode(activity)) {
+                Toast.makeText(activity, R.string.favorites_guest_unavailable, Toast.LENGTH_SHORT).show();
+                return null;
+            }
             return new Intent(activity, FavoritesActivity.class);
         }
         if (selectedItemId == R.id.menu_profile) {

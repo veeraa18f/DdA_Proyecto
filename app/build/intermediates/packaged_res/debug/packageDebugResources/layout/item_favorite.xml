@@ -17,6 +17,7 @@
         android:padding="@dimen/spacing_sm">
 
         <ImageView
+            android:id="@+id/iv_favorite_logo"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -34,6 +35,7 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/tv_favorite_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/asset_name_bitcoin"
@@ -42,6 +44,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/tv_favorite_ticker"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_xs"
@@ -51,6 +54,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/tv_favorite_quantity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_sm"
@@ -75,6 +79,7 @@
             android:src="@drawable/ic_favorite_star" />
 
         <TextView
+            android:id="@+id/tv_favorite_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_sm"

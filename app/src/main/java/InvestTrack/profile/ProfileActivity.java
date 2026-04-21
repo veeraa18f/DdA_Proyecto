@@ -22,6 +22,9 @@ public class ProfileActivity extends AppCompatActivity {
 
     private ImageView profilePhoto;
     private TextView languageValueText;
+    private TextView profileNameText;
+    private TextView profileEmailText;
+    private TextView profilePhoneText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,12 +33,18 @@ public class ProfileActivity extends AppCompatActivity {
 
         profilePhoto = findViewById(R.id.iv_profile_photo);
         languageValueText = findViewById(R.id.tv_profile_language_value);
+        profileNameText = findViewById(R.id.tv_profile_name);
+        profileEmailText = findViewById(R.id.tv_profile_email);
+        profilePhoneText = findViewById(R.id.tv_profile_phone);
         updateProfilePhoto();
         updateLanguageValue();
+        updateProfileData();
 
         profilePhoto.setOnClickListener(view -> showProfilePhotoDialog());
         findViewById(R.id.btn_profile_change_photo).setOnClickListener(view ->
                 showProfilePhotoDialog());
+        findViewById(R.id.btn_profile_edit).setOnClickListener(view ->
+                startActivity(new Intent(this, EditProfileActivity.class)));
         findViewById(R.id.row_profile_language).setOnClickListener(view ->
                 showLanguageDialog());
 
@@ -56,6 +65,12 @@ public class ProfileActivity extends AppCompatActivity {
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav_profile);
         BottomNavHelper.setup(this, bottomNavigationView, R.id.menu_profile);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        updateProfileData();
     }
 
     private void showProfilePhotoDialog() {
@@ -104,6 +119,12 @@ public class ProfileActivity extends AppCompatActivity {
                         ? R.string.language_spanish
                         : R.string.language_english
         );
+    }
+
+    private void updateProfileData() {
+        profileNameText.setText(AppPreferences.getProfileUsername(this));
+        profileEmailText.setText(AppPreferences.getProfileEmail(this));
+        profilePhoneText.setText(AppPreferences.getProfilePhone(this));
     }
 
     private int getProfilePhotoDrawable(int profilePhotoIndex) {

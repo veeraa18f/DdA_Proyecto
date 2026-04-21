@@ -10,4 +10,5 @@ public class HomeViewModel {
     public String searchQuery;
     public String selectedFilter;
     public List<HomeAssetViewModel> assets = new ArrayList<>();
+    public List<HomeAssetViewModel> favoriteAssets = new ArrayList<>();
 }

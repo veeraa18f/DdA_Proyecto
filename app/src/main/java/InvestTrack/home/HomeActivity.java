@@ -20,7 +20,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.tuempresa.investtrack.R;
 
 import InvestTrack.detail.DetailActivity;
-import InvestTrack.favorites.FavoritesActivity;
+import InvestTrack.manage.AddInvestmentActivity;
+import InvestTrack.utils.AppPreferences;
 import InvestTrack.utils.BottomNavHelper;
 
 import java.lang.ref.WeakReference;
@@ -37,6 +38,8 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.View
     private TextView filterStockButton;
     private TextView filterCryptoButton;
     private TextView emptyAssetsText;
+    private LinearLayout favoriteContainer;
+    private TextView emptyFavoritesText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,19 +55,33 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.View
         filterStockButton = findViewById(R.id.filter_home_stock);
         filterCryptoButton = findViewById(R.id.filter_home_crypto);
         emptyAssetsText = findViewById(R.id.tv_home_empty_assets);
+        favoriteContainer = findViewById(R.id.container_home_favorites);
+        emptyFavoritesText = findViewById(R.id.tv_home_empty_favorites);
 
         presenter = new HomePresenter(this);
         injectPresenter(presenter);
         presenter.injectView(new WeakReference<>(this));
         presenter.injectModel(new HomeModel(this));
         setupSearchAndFilters();
+        findViewById(R.id.btn_home_add_investment).setOnClickListener(view -> {
+            if (AppPreferences.isGuestMode(this)) {
+                Toast.makeText(this, R.string.guest_demo_read_only, Toast.LENGTH_SHORT).show();
+                return;
+            }
+            startActivity(new Intent(this, AddInvestmentActivity.class));
+        });
         presenter.onCreateCalled();
-
-        findViewById(R.id.card_home_favorite_preview).setOnClickListener(view ->
-                startActivity(new Intent(this, FavoritesActivity.class)));
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav_home);
         BottomNavHelper.setup(this, bottomNavigationView, R.id.menu_home);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (presenter != null) {
+            presenter.onCreateCalled();
+        }
     }
 
     @Override
@@ -78,6 +95,7 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.View
         balanceChangeText.setText(viewModel.totalChangeText);
         updateFilterControls(viewModel.selectedFilter);
         renderAssets(viewModel);
+        renderFavorites(viewModel);
     }
 
     @Override
@@ -137,6 +155,36 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.View
         profitText.setBackgroundResource(
                 asset.profitPositive ? R.drawable.bg_profit_badge : R.drawable.bg_loss_badge
         );
+    }
+
+    private void renderFavorites(HomeViewModel viewModel) {
+        favoriteContainer.removeAllViews();
+        emptyFavoritesText.setVisibility(viewModel.favoriteAssets.isEmpty() ? View.VISIBLE : View.GONE);
+
+        for (int index = 0; index < viewModel.favoriteAssets.size(); index++) {
+            HomeAssetViewModel asset = viewModel.favoriteAssets.get(index);
+            View card = inflater.inflate(R.layout.item_favorite, favoriteContainer, false);
+            bindFavorite(card, asset);
+            card.setOnClickListener(view -> presenter.onAssetClicked(asset.assetId));
+
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+            );
+            params.topMargin = getResources().getDimensionPixelSize(
+                    index == 0 ? R.dimen.spacing_lg : R.dimen.spacing_md
+            );
+            favoriteContainer.addView(card, params);
+        }
+    }
+
+    private void bindFavorite(View card, HomeAssetViewModel asset) {
+        ((ImageView) card.findViewById(R.id.iv_favorite_logo))
+                .setImageResource(resolveDrawable(asset.logoDrawableName));
+        ((TextView) card.findViewById(R.id.tv_favorite_name)).setText(asset.name);
+        ((TextView) card.findViewById(R.id.tv_favorite_ticker)).setText(asset.ticker);
+        ((TextView) card.findViewById(R.id.tv_favorite_quantity)).setText(asset.quantityText);
+        ((TextView) card.findViewById(R.id.tv_favorite_price)).setText(asset.priceText);
     }
 
     private int resolveDrawable(String drawableName) {

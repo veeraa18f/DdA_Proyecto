@@ -29,6 +29,56 @@
       "quantity": 12,
       "averagePrice": 141.32,
       "logoDrawableName": "logo_tesla"
+    },
+    {
+      "id": "aapl",
+      "name": "Apple",
+      "ticker": "AAPL",
+      "type": "Stock",
+      "currentPrice": 195.64,
+      "quantity": 10,
+      "averagePrice": 171.2,
+      "logoDrawableName": "ic_chart_line"
+    },
+    {
+      "id": "nvda",
+      "name": "Nvidia",
+      "ticker": "NVDA",
+      "type": "Stock",
+      "currentPrice": 881.86,
+      "quantity": 3,
+      "averagePrice": 620.5,
+      "logoDrawableName": "ic_chart_line"
+    },
+    {
+      "id": "amzn",
+      "name": "Amazon",
+      "ticker": "AMZN",
+      "type": "Stock",
+      "currentPrice": 184.3,
+      "quantity": 7,
+      "averagePrice": 149.75,
+      "logoDrawableName": "ic_chart_line"
+    },
+    {
+      "id": "eth",
+      "name": "Ethereum",
+      "ticker": "ETH",
+      "type": "Crypto",
+      "currentPrice": 3150.4,
+      "quantity": 1.6,
+      "averagePrice": 2420.0,
+      "logoDrawableName": "logo_bitcoin"
+    },
+    {
+      "id": "sol",
+      "name": "Solana",
+      "ticker": "SOL",
+      "type": "Crypto",
+      "currentPrice": 145.8,
+      "quantity": 18,
+      "averagePrice": 96.4,
+      "logoDrawableName": "logo_bitcoin"
     }
   ]
 }

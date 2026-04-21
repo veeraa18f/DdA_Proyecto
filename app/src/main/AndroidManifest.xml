@@ -23,7 +23,13 @@
             android:name="InvestTrack.manage.ManageInvestmentActivity"
             android:exported="false" />
         <activity
+            android:name="InvestTrack.manage.AddInvestmentActivity"
+            android:exported="false" />
+        <activity
             android:name="InvestTrack.detail.DetailActivity"
+            android:exported="false" />
+        <activity
+            android:name="InvestTrack.profile.EditProfileActivity"
             android:exported="false" />
         <activity
             android:name="InvestTrack.profile.ProfileActivity"
@@ -36,6 +42,9 @@
             android:exported="false" />
         <activity
             android:name="InvestTrack.register.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name="InvestTrack.forgot.ForgotPasswordActivity"
             android:exported="false" />
         <activity
             android:name="InvestTrack.login.LoginActivity"
