@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorBackground">#101715</color>
+    <color name="colorSurface">#17211E</color>
+    <color name="colorCard">#20302B</color>
+    <color name="colorPrimary">#51D77D</color>
+    <color name="colorPrimarySoft">#173A28</color>
+    <color name="colorButtonSecondary">#235A39</color>
+    <color name="colorTextPrimary">#F2FFF8</color>
+    <color name="colorTextSecondary">#A9BBB2</color>
+    <color name="colorPositive">#6FE89B</color>
+    <color name="colorPositiveContainer">#173A28</color>
+    <color name="colorNegative">#FF8D8D</color>
+    <color name="colorNegativeContainer">#3D2020</color>
+    <color name="colorBorder">#3F5950</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+</resources>

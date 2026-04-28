@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_xxl">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_title"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="@dimen/text_headline"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/input_register_name"
+            style="@style/Widget.InvestTrack.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xxl"
+            android:hint="@string/register_hint_name"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/input_register_email"
+            style="@style/Widget.InvestTrack.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:hint="@string/register_hint_email"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/input_register_password"
+            style="@style/Widget.InvestTrack.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:hint="@string/register_hint_password"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/btn_register_submit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/spacing_xxl"
+            android:background="@drawable/bg_button_primary"
+            android:backgroundTint="@null"
+            android:text="@string/action_register"
+            android:textAllCaps="false"
+            android:textColor="@color/colorTextPrimary"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_register_back"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:background="@drawable/bg_button_secondary"
+            android:backgroundTint="@null"
+            android:text="@string/action_back"
+            android:textAllCaps="false"
+            android:textColor="@color/colorTextPrimary"
+            android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>

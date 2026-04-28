@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">InvestTrack</string>
+    <string name="login_title">Welcome</string>
+    <string name="login_email_label">Username or email</string>
+    <string name="login_email_hint">example@example.com</string>
+    <string name="login_password_label">Password</string>
+    <string name="login_password_hint">••••••••</string>
+    <string name="login_action">Log in</string>
+    <string name="login_forgot_password">Forgot password?</string>
+    <string name="login_signup">Sign up</string>
+    <string name="login_guest">Guest mode</string>
+    <string name="login_error_invalid_credentials">Enter a valid email and a password with at least 6 characters.</string>
+    <string name="register_success">Account created successfully.</string>
+    <string name="register_error_duplicate_email">There is already an account with that email.</string>
+    <string name="investment_updated">Investment updated.</string>
+    <string name="manage_error_invalid_values">Enter a valid price and quantity.</string>
+    <string name="favorite_added">Added to favorites.</string>
+    <string name="favorite_removed">Removed from favorites.</string>
+    <string name="favorites_guest_unavailable">Log in to use favorites.</string>
+    <string name="guest_demo_read_only">Guest mode is a fixed demo. Log in to edit investments.</string>
+
+    <string name="home_greeting">Good morning</string>
+    <string name="home_portfolio_label">Total balance</string>
+    <string name="home_balance_value">$124,830.00</string>
+    <string name="home_balance_change">+12.8%% this month</string>
+    <string name="section_watchlist">Investments</string>
+    <string name="section_favorites">Favorites</string>
+    <string name="home_search_hint">Search your assets</string>
+    <string name="home_empty_assets">No assets match your search.</string>
+    <string name="home_empty_favorites">No favorite assets yet.</string>
+    <string name="home_total_profit_format">%1$s total profit</string>
+    <string name="home_error_data_not_ready">Home data is not ready.</string>
+    <string name="filter_all">All</string>
+    <string name="filter_stock">Stock</string>
+    <string name="filter_crypto">Crypto</string>
+
+    <string name="asset_name_microsoft">Microsoft</string>
+    <string name="asset_ticker_msft">MSFT</string>
+    <string name="asset_price_microsoft">$421.90</string>
+    <string name="asset_qty_microsoft">8 shares</string>
+    <string name="asset_profit_microsoft">+$928</string>
+
+    <string name="asset_name_bitcoin">Bitcoin</string>
+    <string name="asset_ticker_btc">BTC</string>
+    <string name="asset_price_bitcoin">$63,220</string>
+    <string name="asset_qty_bitcoin">0.42 BTC</string>
+    <string name="asset_profit_bitcoin">+$2,108</string>
+
+    <string name="asset_name_tesla">Tesla</string>
+    <string name="asset_ticker_tsla">TSLA</string>
+    <string name="asset_price_tesla">$248.32</string>
+    <string name="asset_qty_tesla">12 shares</string>
+    <string name="asset_profit_tesla">+$1,284</string>
+
+    <string name="asset_type_stock">Stock</string>
+    <string name="asset_type_crypto">Crypto</string>
+    <string name="favorites_title">Favorites</string>
+    <string name="favorites_subtitle">Assets you marked to revisit quickly.</string>
+    <string name="favorites_empty">Add assets to favorites from the detail screen.</string>
+    <string name="detail_title">Asset detail</string>
+    <string name="detail_company_name">Tesla</string>
+    <string name="detail_subtitle">Your position and favorite shortcut.</string>
+    <string name="detail_value_format">Value %1$s</string>
+    <string name="detail_error_asset_not_found">Asset not found.</string>
+    <string name="detail_favorite_in">In favorites</string>
+    <string name="detail_favorite_out">Not in favorites</string>
+    <string name="detail_chart_title">Chart</string>
+    <string name="detail_chart_change">+5.2%</string>
+    <string name="detail_range_1d">1D</string>
+    <string name="detail_range_1w">1W</string>
+    <string name="detail_range_1m">1M</string>
+    <string name="detail_range_1y">1Y</string>
+    <string name="detail_current_price">Current price</string>
+    <string name="detail_today_change">Change</string>
+    <string name="detail_static_percent">+5.2%</string>
+    <string name="detail_position_title">Your position</string>
+    <string name="detail_quantity_label">Quantity</string>
+    <string name="detail_total_value_label">Total value</string>
+    <string name="detail_total_profit_label">Total gain</string>
+    <string name="action_manage_investment">Manage investment</string>
+    <string name="manage_title">Manage investment</string>
+    <string name="manage_subtitle">Update your position review.</string>
+    <string name="manage_update_mode">Update</string>
+    <string name="manage_asset_meta_placeholder">Stock - TSLA</string>
+    <string name="manage_asset_meta_format">%1$s - %2$s</string>
+    <string name="manage_current_price_placeholder">Current price: 250.00 €</string>
+    <string name="manage_current_price_format">Current price: %1$s</string>
+    <string name="manage_quantity_placeholder">Quantity: 5</string>
+    <string name="manage_quantity_format">Quantity: %1$s</string>
+    <string name="manage_new_price_label">New price</string>
+    <string name="manage_new_quantity_label">New quantity</string>
+    <string name="manage_preview_title">Preview</string>
+    <string name="manage_preview_value">Current value</string>
+    <string name="manage_preview_profit">Profit</string>
+    <string name="manage_preview_return">Return</string>
+    <string name="action_update_investment">Update investment</string>
+    <string name="add_title">Add investment</string>
+    <string name="add_subtitle">Create a stock or crypto position in your portfolio.</string>
+    <string name="add_hint_name">Asset name</string>
+    <string name="add_hint_ticker">Ticker, for example AAPL</string>
+    <string name="add_hint_current_price">Current price</string>
+    <string name="add_hint_quantity">Quantity</string>
+    <string name="add_hint_average_price">Average buy price</string>
+    <string name="action_add_investment">Add investment</string>
+    <string name="add_select_title">Add investment</string>
+    <string name="add_custom_option">Custom investment</string>
+    <string name="add_quantity_title">Quantity bought</string>
+    <string name="add_quantity_hint">Quantity</string>
+    <string name="add_error_missing_text">Enter a name and ticker.</string>
+    <string name="add_error_duplicate_asset">That ticker already exists.</string>
+    <string name="add_success">Investment added.</string>
+    <string name="action_remove_investment">Remove investment</string>
+    <string name="remove_select_title">Remove investment</string>
+    <string name="remove_success">Investment removed.</string>
+    <string name="remove_error_failed">Could not remove that investment.</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="register_title">Create your account</string>
+    <string name="register_hint_name">Name</string>
+    <string name="register_hint_email">Email</string>
+    <string name="register_hint_password">Password</string>
+    <string name="action_register">Create account</string>
+    <string name="forgot_title">Reset password</string>
+    <string name="forgot_subtitle">Enter your account email and choose a new password.</string>
+    <string name="forgot_hint_new_password">New password</string>
+    <string name="forgot_hint_confirm_password">Confirm new password</string>
+    <string name="action_reset_password">Reset password</string>
+    <string name="forgot_error_email_not_found">No account was found with that email.</string>
+    <string name="forgot_error_short_password">Password must have at least 6 characters.</string>
+    <string name="forgot_error_password_mismatch">Passwords do not match.</string>
+    <string name="forgot_error_update_failed">Could not update the password.</string>
+    <string name="forgot_success">Password updated. You can log in now.</string>
+    <string name="action_back">Back</string>
+    <string name="profile_title">Profile</string>
+    <string name="profile_name">Guest investor</string>
+    <string name="profile_id_value">Demo session</string>
+    <string name="profile_phone_default">+34 600 000 000</string>
+    <string name="profile_email_default">demo@investtrack.app</string>
+    <string name="profile_option_edit_profile">Edit profile</string>
+    <string name="profile_change_photo">Change profile photo</string>
+    <string name="profile_option_language">Language</string>
+    <string name="language_english">English</string>
+    <string name="language_spanish">Spanish</string>
+    <string name="profile_option_dark_mode">Dark mode</string>
+    <string name="profile_option_logout">Log out</string>
+    <string name="edit_profile_title">Edit profile</string>
+    <string name="edit_profile_subtitle">Update your personal information.</string>
+    <string name="edit_profile_username_label">Username</string>
+    <string name="edit_profile_username_hint">Your username</string>
+    <string name="edit_profile_phone_label">Phone</string>
+    <string name="edit_profile_phone_hint">Your phone number</string>
+    <string name="edit_profile_email_label">Email address</string>
+    <string name="edit_profile_email_hint">you@example.com</string>
+    <string name="action_save_profile">Save profile</string>
+    <string name="profile_saved">Profile updated.</string>
+    <string name="profile_error_invalid_username">Enter a username.</string>
+    <string name="profile_error_invalid_phone">Enter a phone number.</string>
+    <string name="profile_error_invalid_email">Enter a valid email address.</string>
+    <string name="profile_guest_read_only">Guest mode is read-only. Log in to edit your profile.</string>
+    <string name="quantity_one_share">1 share</string>
+    <string name="quantity_shares_format">%1$d shares</string>
+    <string name="bottom_home">Home</string>
+    <string name="bottom_favorites">Favorites</string>
+    <string name="bottom_profile">Profile</string>
+    <string name="cd_back">Go back</string>
+    <string name="cd_favorite">Favorite asset</string>
+    <string name="cd_add_favorite">Add to favorites</string>
+    <string name="cd_remove_favorite">Remove from favorites</string>
+    <string name="cd_portfolio_logo">Investment logo</string>
+    <string name="cd_profile_photo">Profile photo</string>
+    <string name="cd_investtrack_logo">InvestTrack logo</string>
+
+    <string-array name="profile_photo_options">
+        <item>Profile photo 1</item>
+        <item>Profile photo 2</item>
+        <item>Profile photo 3</item>
+    </string-array>
+
+    <string-array name="language_options">
+        <item>English</item>
+        <item>Spanish</item>
+    </string-array>
+</resources>

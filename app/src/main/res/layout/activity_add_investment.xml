@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_xxl">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_title"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="@dimen/text_headline"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:text="@string/add_subtitle"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="@dimen/text_body_large" />
+
+        <EditText
+            android:id="@+id/input_add_name"
+            style="@style/Widget.InvestTrack.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xxl"
+            android:hint="@string/add_hint_name"
+            android:inputType="textCapWords" />
+
+        <EditText
+            android:id="@+id/input_add_ticker"
+            style="@style/Widget.InvestTrack.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:hint="@string/add_hint_ticker"
+            android:inputType="textCapCharacters" />
+
+        <RadioGroup
+            android:id="@+id/group_add_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:checkedButton="@id/option_add_stock"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/option_add_stock"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_weight="1"
+                android:text="@string/filter_stock"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="@dimen/text_body" />
+
+            <RadioButton
+                android:id="@+id/option_add_crypto"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_weight="1"
+                android:text="@string/filter_crypto"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="@dimen/text_body" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/input_add_current_price"
+            style="@style/Widget.InvestTrack.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:hint="@string/add_hint_current_price"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/input_add_quantity"
+            style="@style/Widget.InvestTrack.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:hint="@string/add_hint_quantity"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/input_add_average_price"
+            style="@style/Widget.InvestTrack.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:hint="@string/add_hint_average_price"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/btn_add_investment"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/spacing_xxl"
+            android:background="@drawable/bg_button_primary"
+            android:backgroundTint="@null"
+            android:text="@string/action_add_investment"
+            android:textAllCaps="false"
+            android:textColor="@color/colorTextPrimary"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_cancel_add_investment"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:background="@drawable/bg_button_secondary"
+            android:backgroundTint="@null"
+            android:text="@string/action_cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/colorTextPrimary"
+            android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>

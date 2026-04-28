@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_card"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/list_item_min_height"
+    android:orientation="horizontal"
+    android:padding="@dimen/spacing_lg">
+
+    <FrameLayout
+        android:layout_width="@dimen/icon_box_size"
+        android:layout_height="@dimen/icon_box_size"
+        android:background="@drawable/bg_chip_selected"
+        android:padding="@dimen/spacing_sm">
+
+        <ImageView
+            android:id="@+id/iv_favorite_logo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/cd_portfolio_logo"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo_bitcoin" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_lg"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_favorite_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/asset_name_bitcoin"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="@dimen/text_body_large"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_favorite_ticker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xs"
+            android:text="@string/asset_ticker_btc"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="@dimen/text_caption"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_favorite_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:text="@string/asset_qty_bitcoin"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="@dimen/text_body" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_gravity="end"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/cd_favorite"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_favorite_star" />
+
+        <TextView
+            android:id="@+id/tv_favorite_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:text="@string/asset_price_bitcoin"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="@dimen/text_body_large"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_xxl">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_profile_title"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="@dimen/text_headline"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:text="@string/edit_profile_subtitle"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="@dimen/text_body_large" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xxl"
+            android:text="@string/edit_profile_username_label"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="@dimen/text_body"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/input_edit_profile_username"
+            style="@style/Widget.InvestTrack.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:hint="@string/edit_profile_username_hint"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:text="@string/edit_profile_phone_label"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="@dimen/text_body"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/input_edit_profile_phone"
+            style="@style/Widget.InvestTrack.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:hint="@string/edit_profile_phone_hint"
+            android:inputType="phone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:text="@string/edit_profile_email_label"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="@dimen/text_body"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/input_edit_profile_email"
+            style="@style/Widget.InvestTrack.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:hint="@string/edit_profile_email_hint"
+            android:inputType="textEmailAddress" />
+
+        <Button
+            android:id="@+id/btn_edit_profile_save"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/spacing_xxl"
+            android:background="@drawable/bg_button_primary"
+            android:backgroundTint="@null"
+            android:text="@string/action_save_profile"
+            android:textAllCaps="false"
+            android:textColor="@color/colorTextPrimary"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_edit_profile_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:background="@drawable/bg_button_secondary"
+            android:backgroundTint="@null"
+            android:text="@string/action_cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/colorTextPrimary"
+            android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>
